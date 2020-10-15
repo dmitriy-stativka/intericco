@@ -247,12 +247,10 @@ Template Name: Front-page
         </div>
       </div>
 
-      <div class="service-slider-wrapper">
-        <div class="swiper-container service-middle-main">
-
-          <div class="swiper-wrapper">
+        <div class="service-middle-main">
   
-            <a class="swiper-slide service-middle-main-block">
+            <a class="service-middle-main-block">
+              <div style="background: url(/wp-content/themes/intericco/images/service-img.jpg); background-size: cover;" class="service-middle-main-block-bg"></div>
               <div class="middle-main-block-number">01</div>
               <h2 class="middle-main-block-title">Дизайн</h2>
               <p class="middle-main-block-text">Мы несомненно лидеры на рынке дизайна.
@@ -270,7 +268,8 @@ Template Name: Front-page
               </div>
             </a>
   
-            <a class="swiper-slide service-middle-main-block">
+            <a class="service-middle-main-block">
+              <div style="background: url(/wp-content/themes/intericco/images/service-img.jpg); background-size: cover;" class="service-middle-main-block-bg"></div>
               <div class="middle-main-block-number">01</div>
               <h2 class="middle-main-block-title">Дизайн</h2>
               <p class="middle-main-block-text">Мы несомненно лидеры на рынке дизайна.
@@ -287,32 +286,10 @@ Template Name: Front-page
                 </span>
               </div>
             </a>
-  
-            
-            <a class="swiper-slide service-middle-main-block">
-              <div class="middle-main-block-number">01</div>
-              <h2 class="middle-main-block-title">Дизайн</h2>
-              <p class="middle-main-block-text">Мы несомненно лидеры на рынке дизайна.
-                Поэтому именно нам нужно доверить ваш
-                ответственный проект. Мы несомненно
-                лидеры на рынке дизайна. Поэтому именно
-                н</p>
-              <div class="middle-main-block-bottom">
-                <span class="tripple-btn tripple-btn-medium">
-                  <span class="tripple-btn-first"></span>
-                  <span class="tripple-btn-second"></span>
-                  <span class="tripple-btn-third"></span>
-                  <h3 class="tripple-btn-title">Подробнее</h3>
-                </span>
-              </div>
-            </a>
-  
-          </div>
   
           <div class="service-button-next"><svg class="icon"><use xlink:href="#arrow-down"></svg></div>
   
         </div>
-      </div> 
       
       <div style="max-width: 16.6%; width: 100%; height: 100%;" class="middle-service-left"></div>
     </div>

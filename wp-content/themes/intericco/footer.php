@@ -12,11 +12,55 @@
 
 <?php wp_reset_query(); ?>
 	<footer class="footer">
-		<div class="footer-top">
-			
+		<div class="footer-top" style="background: url(/wp-content/themes/intericco/images/footer-bg.jpg); background-size: cover;">
+			<div class="footer-container">
+				<div class="footer-map">
+					<h1 class="footer-title">Где мы?</h1>
+					<div class="map-container">
+						<span class="line line-purple"></span>
+						<span class="line line-corner"></span>
+						<span class="line line-blue"></span>    
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d164153.5222922773!2d36.145743208428314!3d49.994507027136756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a09f63ab0f8b%3A0x2d4c18681aa4be0a!2z0KXQsNGA0YzQutC-0LIsINCl0LDRgNGM0LrQvtCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0Yw!5e0!3m2!1sru!2sua!4v1602794927384!5m2!1sru!2sua" width="600" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+					</div>
+				</div>
+				<div class="footer-form">
+					<h1 class="footer-title">Связаться</h1>
+					<div class="tripple-lines">
+						<div class="tripple-lines-long"></div>
+						<div class="tripple-lines-two"></div>
+					</div>
+				</div>
+				<div class="footer-top-right-text">
+					<span>Interrico</span>
+				</div>
+			</div>	
 		</div>
 		<div class="footer-bottom">
-			
+			<div class="footer-container">
+				<div class="footer-bottom-left">
+					<div class="footer-bottom-left-title">
+						<h1 class="footer-title">Навигация</h1>
+						<span>ПО САЙТУ</span>
+					</div>
+					<ul class="footer-bottom-left-menu">
+						<li class="footer-menu-item"><a href="#">Главная</a></li>
+						<li class="footer-menu-item"><a href="#">Портфолио</a></li>
+						<li class="footer-menu-item"><a href="#">Блог</a></li>
+						<li class="footer-menu-item"><a href="#">Дизайн</a></li>
+						<li class="footer-menu-item"><a href="#">Архитектура</a></li>
+						<li class="footer-menu-item"><a href="#">Контакты</a></li>
+					</ul>
+
+					<div class="footer-social">
+						<div class="social">
+							<a class="social-icon" href="#"><svg class="icon"><use xlink:href="#inst"></svg></a>
+							<a class="social-icon" href="#"><svg class="icon"><use xlink:href="#twitter"></svg></a>
+							<a class="social-icon" href="#"><svg class="icon"><use xlink:href="#facebook"></svg></a>                
+						</div>
+					</div>
+				</div>
+				<div class="footer-bottom-right"></div>
+			</div>
 		</div>
 	</footer>
 

@@ -48,20 +48,7 @@ $(document).ready(function () {
         //
         grabCursor: true,
       });
-      
-      var swiper = new Swiper('.service-middle-main', {
-        direction: 'horizontal',
-        slidesPerView: 2,
-        loop: true,
-        spaceBetween: 0,
-        mousewheelControl: true,  
-        speed: 600,
-        navigation: {
-          nextEl: '.service-button-next',
-        },
-
-    });
-
+    
     //menu
     $(".menu-left-top").click(function() {
       $("body").addClass("menu-opened");
