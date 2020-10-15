@@ -9,6 +9,221 @@
     left: 0;
     z-index: 11;
 
+    .navigation{
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 30;
+        transform: translate(-110%);
+        transition: transform 800ms cubic-bezier(.77,0,.175,1);
+
+        &-left{     
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-bottom: 12%;       
+            height: 100%;
+            width: 100px;
+            background-color: #151515;
+
+            .menu-left-top-burger-close{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100px;
+                height: 100px;
+                background: #1B1B1B;
+                cursor: pointer;      
+
+                .menu-left-top-burger-cross{
+                    display: block;
+                    margin: auto 0;
+                    position: relative;
+                    width: 40px;
+                    padding: 0;
+                    cursor: pointer;
+            
+                    &:before{                
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: 3px;
+                        background-color: #fff;
+                        transform: rotate(45deg);
+                        transition: transform 0.3s ease;               
+                    }
+            
+                    span{
+                        display: block;
+                        width: 100%;
+                        height: 3px;
+                        margin: 8px 0;
+                        background-color: #fff;
+                        transition: all 0.3s ease;
+                        position: absolute;
+                        left: -1000px;
+                    }
+            
+                    &:after{
+                        content: "";
+                        height: 3px;
+                        width: 100%;
+                        transform: rotate(-45deg);
+                        transition: all 0.3s ease;   
+                        position: absolute;
+                        top: 0;
+                        background-color: #fff;
+                        display: block;             
+                        transition: transform 0.3s ease;   
+                    }
+    
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }      
+            
+            .text-with-logo{
+                transform-origin: initial;
+
+                span{
+                    display: block;
+                    white-space: nowrap;
+                }
+            }
+        }
+
+        .menu-list{
+            display: flex;
+            height: 100%;
+            width: 100%;     
+            background-color: #222222;     
+
+            .menu-list-item{
+                height: 100%;
+                width: calc(100%/6);              
+                overflow: hidden;
+                position: relative;
+
+                .menu-list-item-bg{
+                    height: 100%;
+                    width: 100%;
+                    transform: scale(1.1);
+                    position: relative;
+                    transition: transform 0.3s ease;
+
+                    &:after{
+                        content: "";
+                        background-color: rgba(0,0,0,0.6);
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                    }
+                }
+
+                .menu-list-item-container{
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: #222222;
+                    transition: background-color 0.3s ease;
+
+
+                    .menu-list-item-link{
+                        display: block;
+                        height: 100%;
+                        width: 100%;
+                    }
+
+                    .link-content{
+                        position: absolute;
+                        top: 30%;     
+                        right: 0;
+                        left: 0;
+                        text-align: center;                                           
+
+                        .link-content-main{
+                            font-family: "Gotham Pro", sans-serif;                         
+                            font-size: 23px;
+                            font-weight: bold;
+                            transition: color 0.3s ease;
+                        }
+
+                        .link-content-sub{
+                            margin-top: 80px;
+                            padding: 0px 10%;
+
+                            .link-content-sub-item{
+                                margin-bottom: 40px;
+                                padding-bottom: 30px;
+                                border-bottom: #6D6D6D 1px solid;
+
+                                a{
+                                    font-family: "Gotham Pro", sans-serif;                         
+                                    font-size: 23px;
+                                    font-weight: bold;
+                                    transition: color 0.3s ease;
+
+                                    &:hover{
+                                        color: #E05D68;
+                                        transition: color 0.3s ease;
+                                    }
+                                }
+
+                                &:last-child{
+                                    border-bottom: none;
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover{
+                        background-color: transparent;
+                        transition: background-color 0.3s ease;
+
+                        .link-content-main{
+                            color: #E05D68;
+                            transition: color 0.3s ease;
+                        }
+                    }
+                }
+
+                &:nth-child(2n) {
+
+                    .menu-list-item-container{
+                        background-color: #292929;
+                        transition: background-color 0.3s ease;
+
+                        &:hover{
+                            background-color: transparent;
+                            transition: background-color 0.3s ease;
+                        }
+                    }
+                }
+
+                &:hover{
+
+                    .menu-list-item-bg{
+                        transform: scale(1);
+                        transition: transform 0.3s ease;
+                    }
+                }
+            }
+        }
+
+        &.navigation-open{
+            transform: translate(0%);
+            transition: transform 800ms cubic-bezier(.77,0,.175,1);
+        }
+    }
+
     &-top{
 
         &-burger{
@@ -18,7 +233,7 @@
             width: 100px;
             height: 100px;
             background: #1B1B1B;
-            cursor: pointer;    
+            cursor: pointer;      
         
             &-btn{
                 display: block;
@@ -44,6 +259,7 @@
                     height: 3px;
                     margin: 8px 0;
                     background-color: #fff;
+                    transition: all 0.3s ease;
                 }
         
                 &:after{

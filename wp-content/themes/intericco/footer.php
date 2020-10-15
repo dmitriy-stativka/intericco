@@ -12,7 +12,12 @@
 
 <?php wp_reset_query(); ?>
 	<footer class="footer">
-	
+		<div class="footer-top">
+			
+		</div>
+		<div class="footer-bottom">
+			
+		</div>
 	</footer>
 
 <?php wp_footer(); ?>
@@ -43,10 +48,22 @@
 	<symbol id="arrow-right" viewBox="0 0 34 12">
 		<path d="M28.9589 11.0411L34 6.00009L28.9589 0.958984L27.4444 2.47352L29.8999 4.92914L0 4.92914V7.07103L29.8999 7.07103L27.4444 9.52658L28.9589 11.0411Z"/>
 	</symbol>
+
+	<symbol id="star" viewBox="0 0 29 29">
+		<path d="M29 11.223L18.5745 10.3385L14.5 0.725037L10.4255 10.3385L0 11.223L7.91699 18.0815L5.53897 28.275L14.5 22.8665L23.461 28.275L21.083 18.0815L29 11.223Z"/>
+	</symbol>
+
+	<symbol id="plus" viewBox="0 0 16 16">
+		<path d="M14.5831 7.3728H8.31122V1.1009C8.31122 0.754497 8.03042 0.473694 7.68402 0.473694C7.33762 0.473694 7.05682 0.754497 7.05682 1.1009V7.37283H0.784919C0.438518 7.3728 0.157715 7.6536 0.157715 8C0.157715 8.3464 0.438518 8.6272 0.784919 8.6272H7.05685V14.8991C7.05685 15.2455 7.33766 15.5263 7.68406 15.5263C8.03046 15.5263 8.31126 15.2455 8.31126 14.8991V8.6272H14.5832C14.9296 8.6272 15.2104 8.3464 15.2104 8C15.2104 7.6536 14.9295 7.3728 14.5831 7.3728Z"/>
+	</symbol>
+
+	<symbol id="minus" viewBox="0 0 16 2">
+		<rect x="0.157715" y="0.315796" width="15.0526" height="1.36842" rx="0.684211"/>
+	</symbol>
 </svg>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="/wp-content/themes/intericco/js/app.min.js"></script>
 
 </body>
