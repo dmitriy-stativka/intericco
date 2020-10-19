@@ -34,6 +34,12 @@ $(document).ready(function () {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
           },
+
+          breakpoints: {
+            1024: {
+              slidesPerView: 3
+            }
+          },
         
         // And if we need scrollbar
         //scrollbar: '.swiper-scrollbar',
@@ -42,7 +48,7 @@ $(document).ready(function () {
         // Distance between slides in px.
         spaceBetween: 60,
         //
-        slidesPerView: 3,
+        slidesPerView: 1,
         //
         centeredSlides: true,
         //
