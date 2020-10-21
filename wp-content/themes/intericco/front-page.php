@@ -35,9 +35,9 @@ Template Name: Front-page
       <div class="left-side-title middle-portfolio-left-title">
         <div class="left-side-title-wrapper portfolio-left-title-wrapper">
           <h2 class="left-side-title-tag portfolio-left-title-tag">Портфолио</h2>
-          <span class="line line-purple"></span>
-          <span class="line line-corner"></span>
-          <span class="line line-blue"></span>        
+          <span class="line line-purple line-purple-mob"></span>
+          <span class="line line-corner line-corner-mob"></span>
+          <span class="line line-blue line-blue-mob"></span>        
         </div>
         <div class="portfolio-left-title-red_line">
           <span></span>
@@ -91,21 +91,14 @@ Template Name: Front-page
                 <img src="/wp-content/themes/intericco/images/design-slide.jpg">
                 <h3 class="slide-title">Дизайн интерьера</h3>
               </div>
-              <div class="swiper-slide">
-                <img src="/wp-content/themes/intericco/images/design-slide.jpg">
-                <h3 class="slide-title">Дизайн интерьера</h3>
-              </div>
-              <div class="swiper-slide">
-                <img src="/wp-content/themes/intericco/images/design-slide.jpg">
-                <h3 class="slide-title">Дизайн интерьера</h3>
-              </div>
           </div>
           <div class="swiper-pagination">
             <span>1</span>
             <span>2</span>
             <span>3</span>
           </div>
-          <div class="swiper-button-next"><svg class="icon"><use xlink:href="#plus"></svg></div>   
+          <div class="swiper-button-next"><svg class="icon"><use xlink:href="#plus"></svg></div>  
+          <div class="swiper-button-prev"><svg class="icon"><use xlink:href="#minus"></svg></div>  
 
         </div>
       </div>
@@ -117,6 +110,7 @@ Template Name: Front-page
 
     <div class="middle-line middle-line-first">
       <div class="middle-line-square"></div>
+      <div class="middle-line-square middle-line-square-mob"></div>
     </div>
     <div class="middle-line middle-line-second">
       <div class="middle-line-square"></div>
@@ -129,9 +123,11 @@ Template Name: Front-page
     </div>
     <div class="middle-line middle-line-fifth">
       <div class="middle-line-square"></div>
+      <div class="middle-line-square middle-line-square-mob"></div>
+
     </div>
 
-    <div class="left-side left-side-sm">
+    <div class="left-side left-side-sm left-side-info">
       <div class="left-side-title left-side-sm-title">
         <div class="left-side-title-wrapper left-side-sm-title-wrapper">
           <h2 class="left-side-title-tag left-side-sm-title-tag">О НАС</h2>       
@@ -145,7 +141,14 @@ Template Name: Front-page
     <div class="info-middle">
 
       <div class="info-middle-top">
-        <h1 class="info-middle-top-title">Инфографика</h1>
+
+          <div class="lines-title-wrapper">
+            <!-- <h2 class="left-side-title-tag">Инфографика</h2> -->
+            <h1 class="lines-title info-middle-top-title">Инфографика</h1>
+            <span class="line line-purple line-purple-mob"></span>
+            <span class="line line-corner line-corner-mob"></span>
+            <span class="line line-blue line-blue-mob"></span>             
+          </div>       
       </div>
       <div class="info-middle-main">
         <div class="info-middle-main-numbers">
@@ -223,7 +226,12 @@ Template Name: Front-page
         <div class="service-top-middle-right">
 
           <div class="title-block">
-            <h2>Наши услуги</h2>
+            <div class="lines-title-wrapper">
+              <h2 class="lines-title info-middle-top-title">Наши услуги</h2>
+              <span class="line line-purple line-purple-mob"></span>
+              <span class="line line-corner line-corner-mob"></span>
+              <span class="line line-blue line-blue-mob"></span>             
+            </div>   
             <div class="title-block-lines">
               <span class="line line-purple"></span>
               <span class="line line-corner"></span>
@@ -291,7 +299,7 @@ Template Name: Front-page
   
         </div>
       
-      <div style="max-width: 16.6%; width: 100%; height: 100%;" class="middle-service-left"></div>
+      <div class="middle-service-left"></div>
     </div>
 
     <div class="service-bottom">
@@ -308,7 +316,7 @@ Template Name: Front-page
     <div class="left-side left-side-sm">
       <div class="left-side-title left-side-sm-title">
         <div class="left-side-title-wrapper left-side-sm-title-wrapper">
-          <h2 class="left-side-title-tag left-side-sm-title-tag">НАШИ нОВОСТИ</h2>       
+          <h2 class="left-side-title-tag left-side-sm-title-tag">НАШИ НОВОСТИ</h2>       
         </div>
       </div>
       <div class="left-side-text left-side-sm-text">
@@ -326,7 +334,12 @@ Template Name: Front-page
             <span class="line line-corner"></span>
             <span class="line line-blue"></span>  
           </div>    
-          <h2>Наши новости</h2>    
+          <div class="lines-title-wrapper">
+              <h2 class="lines-title info-middle-top-title">Новости</h2>
+              <span class="line line-purple line-purple-mob"></span>
+              <span class="line line-corner line-corner-mob"></span>
+              <span class="line line-blue line-blue-mob"></span>             
+            </div>     
         </div>
 
         <a class="news-middle-top-link" href="#">НАШИ НОВОСТИ</a>

@@ -6,6 +6,9 @@
                     <span></span>
                 </button> 
             </div>
+            <a class="logo-mob" href="#">
+                <img src="/wp-content/themes/intericco/images/logo.svg">
+            </a>
             <a href="#" class="text-with-logo">
                 <h3>INTERICCO </h3>
                 <span>Interior design studio</span>
