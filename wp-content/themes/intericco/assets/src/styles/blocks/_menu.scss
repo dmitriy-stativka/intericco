@@ -394,6 +394,27 @@
         }
     }
 
+    .info-right{
+        display: none;
+        padding-bottom: 50px;
+        
+        .text-with-logo{
+            transform-origin: initial;
+
+            h3{
+                color: black;           
+            }
+
+            span{
+                white-space: nowrap;
+            }
+
+            &:before{
+                display: none;
+            }
+        }
+    }
+
     @media(min-width: $desktop) {
         left: 0;
         top: 0;
