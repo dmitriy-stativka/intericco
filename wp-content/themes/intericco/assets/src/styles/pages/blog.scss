@@ -1,0 +1,483 @@
+.page-template-blog{
+
+    .header{
+        display: none;
+    }
+
+    .blog-wrapper{
+        display: flex;
+        justify-content: center;
+        min-height: 100vh;
+        position: relative;
+        padding: 0 150px;
+
+        .menu-left{
+            height: 100%;
+        }
+
+        .blog-container{
+            max-width: 1300px;
+            width: 100%;
+            padding-top: 100px;
+            padding-bottom: 150px;
+            position: relative;
+
+            .top-crumbs{
+                margin-bottom: 140px;
+
+                .crumbs-last{
+
+                    .line{
+
+                        &-purple{
+                            height: 3px;
+                            width: 100px;
+                            right: 41px;
+                            bottom: -11px;
+                        }
+              
+                        &-corner{
+                            border-width: 0 3px 3px 0;
+                            height: 10px;
+                            width: 50px;
+                            right: -9px;
+                            bottom: -10px;
+                        }
+              
+                        &-blue{
+                            height: 30px;
+                            width: 3px;
+                            right: -10px;
+                            bottom: 0px;
+                        }
+                    }
+                }
+            }
+
+            .blog-slider{
+                width: 100%;
+                position: relative;
+
+                .design-icon{
+                    max-width: 150px;
+                    max-height: 200px;
+                    position: absolute;
+                    top: 470px;
+                    right: -25px;
+                    z-index: -1;
+                  }
+
+                .swiper-container{
+                    position: initial;
+
+                    .swiper-slide{
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        padding: 30px 30px;                                              
+
+                        .blog-item{
+                            display: flex;
+                            flex-direction: column;
+                            padding: 30px 20px 50px;
+                            max-width: 48%;
+                            background-color: white;
+                            transition: box-shadow 0.3s ease, background-color 0.3s ease;
+                            position: relative;
+                            margin-bottom: 40px;
+
+                            .line{
+                                opacity: 0; 
+                                transition: opacity 0.3s ease;                               
+    
+                                &-purple{
+                                  width: 150px;
+                                  height: 3px;
+                                  left: 60px;
+                                  top: -20px;
+        
+                                  @media(min-width: $desktop) {
+                                    width: 230px;
+                                  }
+                                }
+                      
+                                &-corner{
+                                  width: 75px;
+                                  height: 140px;
+                                  border-width: 3px 0px 0px 3px;
+                                  top: -19px;
+                                  left: -15px;
+                                }
+                      
+                                &-blue{
+                                  height: 200px;
+                                  width: 3px;
+                                  top: 121px;
+                                  left: -13px;                              
+                                }
+                            }
+
+                            &-title{
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                padding-left: 15px;
+                                margin-bottom: 30px;
+
+                                h3{
+                                    font-family: "Gotham Pro", sans-serif;
+                                    font-style: normal;
+                                    font-weight: bold;
+                                    font-size: 28px;
+                                    color: #2B2B2B;
+                                }
+
+                                .tripple-btn{
+                                    height: 4px;   
+                                    margin-right: 6px;                              
+                                }
+                            }
+
+                            &-img{
+                                width: 100%;
+                                height: 280px;
+                                position: relative;                               
+
+                                img{
+                                    display: block;
+                                    height: 100%;
+                                    width: 100%;
+                                    object-fit: cover;
+                                }
+
+                                &:before{
+                                    content: "";    
+                                    display: block;                                
+                                    width: 10px;
+                                    height: 10px;
+                                    border-radius: 50%;
+                                    background-color: #000000;
+                                    position: absolute;
+                                    bottom: -5px;
+                                    left: -40px;
+                                }
+
+                                &:after{
+                                    content: "";    
+                                    display: block;                                
+                                    width: 300px;
+                                    height: 1px;
+                                    background-color: #000000;
+                                    position: absolute;
+                                    bottom: -1px;
+                                    left: -40px;
+                                }
+                            }
+
+                            &-text{
+                                font-family: "Gotham Pro", sans-serif;
+                                font-style: normal;
+                                font-weight: normal;
+                                font-size: 16px;
+                                color: black;
+                                line-height: 29px;
+                                margin: 30px 0 45px 0;
+                                padding-left: 15px;
+                                max-height: 90px;
+                                overflow: hidden;
+                                position: relative;
+
+                                &:after{
+                                    content: "";
+                                    display: block;
+                                    height: 65%;
+                                    transition: opacity 0.3s ease;
+                                    opacity: 1;
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+                                    right: 0;
+                                    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff 100%);
+                                }
+                            }
+
+                            &-bottom{
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                padding-left: 25px;
+
+                                .tripple-btn{
+
+                                    .tripple-btn-title{                                       
+                                        font-size: 14px;
+                                        text-transform: initial;
+                                        letter-spacing: initial;
+                                    }
+
+                                    &:after{
+                                        content: "";
+                                        display: block;
+                                        background-image: url(/wp-content/themes/intericco/images/Vector.svg);
+                                        background-position: center center;
+                                        background-repeat: no-repeat;
+                                        height: 40px;
+                                        width: 50px;
+                                        background-color: #E05D68;
+                                        position: absolute;
+                                        right: -70px;
+                                    }
+                                }
+
+                                .blog-item-bottom-date{
+                                    font-family: "Gotham Pro", sans-serif;
+                                    font-style: normal;
+                                    font-weight: normal;
+                                    font-size: 14px;
+                                    color: black;
+                                }
+                            }
+
+                            &:hover{
+                                box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.08);
+                                transition: box-shadow 0.3s ease, background-color 0.3s ease;
+                                background-color: white;
+
+                                .line{
+                                    opacity: 1;
+                                    transition: opacity 0.3s ease;
+                                }
+
+                                .tripple-btn-first{
+                                    margin-top: -2%;
+                                    transition: margin-top 0.2s ease;
+                                  }
+                            
+                            
+                                .tripple-btn-second{
+                                    margin-top: 0%;
+                                    transition: margin-top 0.2s ease;
+                                }
+                        
+                                .tripple-btn-third{
+                                    margin-top: 2%;
+                                    transition: margin 0.2s ease;
+                                }
+                            }
+                        }
+                    }
+
+                    .swiper-pagination{
+                        display: flex;
+                        justify-content: center;
+                        height: 30px;
+                        top: -50px;
+                        width: initial;
+                        left: initial;
+                        right: 80px;
+            
+                        .swiper-pagination-bullet{
+                          background: none;
+                          height: auto;
+                          width: 30px;
+                          border-bottom: 1px solid black;
+                          border-radius: 0;
+                          text-align: left;
+                          font-family: "Gotham Pro", sans-serif;
+                          font-style: normal;
+                          font-weight: normal;
+                          font-size: 16px;
+                          transition: width 0.3s ease, color 0.3s ease;
+                          color: #E4E4E4;
+                          border-color: #E4E4E4;
+                          opacity: 1;
+                        }
+            
+                        .swiper-pagination-bullet-active{
+                          color: #000;
+                          border-color: #000;
+                          width: 50px;
+                          transition: width 0.3s ease, color 0.3s ease;
+                        }
+            
+                        @media(min-width: $desktop) {
+                          justify-content: initial;
+                        }
+                      }  
+
+                    .swiper-button-next{
+                        left: initial;
+                        top: initial;
+                        top: -50px;
+                        right: 10px;
+                        height: 45px;
+                        width: 45px;                              
+                        font-size: 32px;
+                        border: 1px solid black;
+                        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+                        transform: rotate(45deg);
+            
+                        .icon{
+                          height: 15px;
+                          width: 15px;
+                          fill: black;
+                          transform: rotate(45deg);
+                          transition: fill 0.3s ease;
+                        }
+            
+                        &:after{
+                          content: "";
+                        }
+            
+                        &:before{
+                          content: '';
+                          display: none;
+                          height: 45px;
+                          width: 45px;
+                          border: 2px solid #BD5B98;
+                          border-width: 2px 0px 0px 2px;
+                          position: absolute;
+                          top: -6px;
+                          left: -6px;
+                        }
+
+                        &:hover{
+                            background-color: #000; 
+                            box-shadow: 1px 1px 30px -3px rgba(0, 0, 0, 0.49);                           
+                            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+                            .icon{
+                                fill: white;
+                                transition: fill 0.3s ease;
+                            }
+                        }
+                    }
+            
+                      .swiper-button-prev{                     
+                        right: 250px;
+                        top: -50px;     
+                        left: initial;                   
+                        height: 45px;
+                        width: 45px;  
+                        border: 1px solid black;         
+                        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+                        font-size: 32px;
+                        transform: rotate(45deg);
+                        
+                        .icon{
+                            height: 15px;
+                            width: 15px;
+                            fill: black;
+                            transform: rotate(-45deg);
+                            transition: fill 0.3s ease;
+                        }
+                
+                        &:after{
+                            content: "";
+                        }
+
+                        &:hover{
+                            background-color: #000; 
+                            box-shadow: 1px 1px 30px -3px rgba(0, 0, 0, 0.49);
+                            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+                            .icon{
+                                fill: white;
+                                transition: fill 0.3s ease;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .consultation{
+                display: flex;
+                justify-content: space-between;
+                margin: 0 auto;
+                max-width: 810px;
+                width: 100%;
+                position: relative;
+                box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.08);
+                background-color: white;
+
+                &-text{
+                    padding: 40px 0 40px 50px;
+                    
+                    h3{
+                        font-family: "Gotham Pro", sans-serif;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 25px;
+                        color: #232222;
+                    }
+
+                    p{
+                        font-family: "Gotham Pro", sans-serif;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 18px;
+                        color: #232222;
+                    }
+                }
+
+                .tripple-btn{
+                    align-self: flex-end;
+                    margin-right: 70px;
+
+                    .tripple-btn-title{                                       
+                        font-size: 14px;
+                        text-transform: initial;
+                        letter-spacing: initial;
+                    }
+
+                    &:after{
+                        content: "";
+                        display: block;
+                        background-image: url(/wp-content/themes/intericco/images/Vector.svg);
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        height: 40px;
+                        width: 50px;
+                        background-color: #E05D68;
+                        position: absolute;
+                        right: -70px;
+                    }
+                }
+
+                &:before{
+                    content: "";
+                    display: block;
+                    background-color: #E05D68;
+                    width: 25px;
+                    height: 25px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                
+                &:hover{
+                    
+                    .tripple-btn-first{
+                        margin-top: -2%;
+                        transition: margin-top 0.2s ease;
+                      }
+                
+                
+                    .tripple-btn-second{
+                        margin-top: 0%;
+                        transition: margin-top 0.2s ease;
+                    }
+            
+                    .tripple-btn-third{
+                        margin-top: 2%;
+                        transition: margin 0.2s ease;
+                    }
+                }
+            }
+
+            .design-seo{
+                margin-top: 70px;
+            }
+        }
+    }
+}

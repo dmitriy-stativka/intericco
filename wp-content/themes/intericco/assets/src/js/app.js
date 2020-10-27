@@ -54,6 +54,30 @@ $(document).ready(function () {
         //
         grabCursor: true,
       });
+
+      var mySwiper = new Swiper(".blog-slider-container", {
+        // Optional parameters
+        direction: "horizontal",
+        loop: true,
+        speed: 500,
+      
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+                clickable: true,
+              renderBullet: function (index, className) {
+                  return '<span class="' + className + '">' + ('0' + (index + 1)) + '</span>';
+              },
+        },  
+      
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        }
+      });
+      
     
     //menu
     $(".menu-left-top").click(function() {
