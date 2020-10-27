@@ -92,5 +92,11 @@
     </div>   
     <div class="menu-left-bottom">
         <svg class="icon"><use xlink:href="#arrow-down"></svg>
-    </div>     
+    </div>  
+    <div class="info-right">
+        <a href="#" class="text-with-logo">
+            <h3>INTERICCO </h3>
+            <span>Interior design studio</span>
+        </a>
+    </div>   
 </div>
