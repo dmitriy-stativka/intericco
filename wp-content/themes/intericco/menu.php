@@ -14,7 +14,9 @@
                 <span>Interior design studio</span>
             </a>
         </div>
-        <ul class="menu-list">
+
+
+        <!-- <ul class="menu-list">
             <li class="menu-list-item">
                 <div style="background-image: url(/wp-content/themes/intericco/images/menu-bg.jpg); background-size: cover; background-position: center;" class="menu-list-item-bg"></div>
                 <div class="menu-list-item-container" href="#">
@@ -42,6 +44,7 @@
                     </div>
                 </div>
             </li>
+
             <li class="menu-list-item">
                 <div style="background-image: url(/wp-content/themes/intericco/images/menu-bg.jpg); background-size: cover; background-position: center;" class="menu-list-item-bg"></div>
                 <div class="menu-list-item-container" href="#">
@@ -51,6 +54,7 @@
                     </div>
                 </div>
             </li>
+
             <li class="menu-list-item">
                 <div style="background-image: url(/wp-content/themes/intericco/images/menu-bg.jpg); background-size: cover; background-position: center;" class="menu-list-item-bg"></div>
                 <div class="menu-list-item-container" href="#">
@@ -78,7 +82,46 @@
                     </div>
                 </div>
             </li>
+        </ul> -->
+
+
+        <ul class="menu-list">
+        <?php
+            $params = array(
+                'post_type' => 'menu',
+                'posts_per_page' => -1
+            );
+            $query = new WP_Query( $params );
+            ?>
+            <?php if($query->have_posts()): ?>
+                
+                <?php while ($query->have_posts()): $query->the_post() ?>
+                    <?php $background = get_field('background'); 
+                            $link = get_field('link'); 
+                    ?>
+
+                <li class="menu-list-item">
+                    <div style="background-image: url(<?php echo $background['url'] ?>); background-size: cover; background-position: center;" class="menu-list-item-bg"></div>
+                    <div class="menu-list-item-container">
+                        <a class="menu-list-item-link" href="<?php echo $link;?>"></a>
+                        <div class="link-content">
+                            <a class="link-content-main" href="<?php echo $link;?>"><?php the_title();?></a>                      
+                        </div>
+                    </div>
+                </li>
+                    
+                    <?php endwhile; ?>
+            <?php endif; 
+        ?>
         </ul>
+
+
+        <?php
+                wp_reset_postdata();
+                global $post;
+            ?>
+
+
     </div>
     <div class="menu-left-top">
         <div class="menu-left-top-burger">

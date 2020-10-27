@@ -10,13 +10,11 @@ Template Name: Front-page
 <section style="background: url(/wp-content/themes/intericco/images/front-page-bg.jpg) no-repeat top center; background-size: cover;" class="top-site">   
   <div class="top-site-middle">
     <h1 class="top-site-middle-title">
-      <strong>Мы создаём</strong>
-      безупречные интерьеры.
+      <?php the_field('general_title');?>
     </h1>
     <div class="top-site-middle-bottom">
-      <a href="#" class="main-link top-site-middle-bottom-link">Доверить нам проект</a>
-      <p>Eсли вы планируете в скором времени</br> 
-        ремонт. Пройди тест чтобы определиться </p>
+      <a href="#" class="main-link top-site-middle-bottom-link"><?php the_field('general_btn');?></a>
+      <p><?php the_field('prizyv');?></p>
     </div>
   </div>
   <div class="long-line"></div>
@@ -79,18 +77,28 @@ Template Name: Front-page
 
           <div class="swiper-wrapper">
 
-              <div class="swiper-slide">
-                <img src="/wp-content/themes/intericco/images/design-slide.jpg">
-                <h3 class="slide-title">Дизайн интерьера</h3>
-              </div>
-              <div class="swiper-slide">
-                <img src="/wp-content/themes/intericco/images/design-slide.jpg">
-                <h3 class="slide-title">Дизайн интерьера</h3>
-              </div>
-              <div class="swiper-slide">
-                <img src="/wp-content/themes/intericco/images/design-slide.jpg">
-                <h3 class="slide-title">Дизайн интерьера</h3>
-              </div>
+              <?php
+                $params = array(
+                    'post_type' => 'design',
+                    'posts_per_page' => -1
+                );
+                $query = new WP_Query( $params );
+                ?>
+                <?php if($query->have_posts()): ?>
+                    
+                    <?php while ($query->have_posts()): $query->the_post() ?>
+                        <?php $miniImg = get_field('mini_img');  
+                        ?>
+
+                        <div class="swiper-slide">
+                          <img src="<?php echo $miniImg['url']?>">
+                          <h3 class="slide-title"><?php the_title();?></h3>
+                        </div>
+                        
+                        <?php endwhile; ?>
+                <?php endif; 
+            ?>
+
           </div>
           <div class="swiper-pagination">
             <span>1</span>

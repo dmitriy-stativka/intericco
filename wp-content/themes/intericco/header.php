@@ -33,21 +33,28 @@ section and everything up until
       <div class="wrapper">
         <header class="header">
           <div class="header-left-block">       
-            <div class="header-lang">
-              <span class="header-lang-item header-lang-item-active">RU</span>
-              <span class="slash">/</span>
-              <span class="header-lang-item">EN</span>
-            </div>
+            <ul class="header-lang">
+              <?php pll_the_languages();?>
+            </ul>
           </div>       
-          <a href="#" class="header-logo">
-            <img src="/wp-content/themes/intericco/images/logo.svg" alt="Logo">
-          </a>
+      
+          <?php 	
+            $custom_logo_id = get_theme_mod( 'custom_logo' );
+            $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+
+            if($custom_logo_id){ ?>
+              <a href="<?php echo home_url(); ?>" class="header-logo">
+                <img src="<?php echo $image[0];?>" alt="">
+              </a> 
+            <?php }
+          ?>
+
           <div class="header-right-block">
             <div class="small-line"></div>
             <div class="social">
-              <a class="social-icon" href="#"><svg class="icon"><use xlink:href="#inst"></svg></a>
-              <a class="social-icon" href="#"><svg class="icon"><use xlink:href="#twitter"></svg></a>
-              <a class="social-icon" href="#"><svg class="icon"><use xlink:href="#facebook"></svg></a>                
+              <a class="social-icon" target="_blank" href="<?php the_field('insta');?>"><svg class="icon"><use xlink:href="#inst"></svg></a>
+              <a class="social-icon" target="_blank" href="<?php the_field('twitter');?>"><svg class="icon"><use xlink:href="#twitter"></svg></a>
+              <a class="social-icon" target="_blank" href="<?php the_field('facebook');?>"><svg class="icon"><use xlink:href="#facebook"></svg></a>                
             </div>
           </div>
         </header>

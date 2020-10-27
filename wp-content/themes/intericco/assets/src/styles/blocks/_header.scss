@@ -17,23 +17,35 @@
         .header-lang{
             display: flex;
             align-items: center;
-    
-            &-item{
-                font-family: "Gotham Pro", sans-serif;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 14px;
-                color: #545454;
-    
-                &-active{
+
+            li{
+                display: flex;
+
+                &:marker{
+                    display: none;
+                }
+
+                a{
+                    font-family: "Gotham Pro", sans-serif;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    color: #545454;
+                }
+
+                &:last-child{
+                    &:before{
+                        content: '/';
+                        display: block;
+                        margin: 0px 10px;
+                        color: #545454;
+                    }
+                }
+
+                &.current-lang a{
                     color: #fff;
                 }
-            }
-    
-            .slash{
-                margin: 0px 10px;
-                color: #545454;
-            }       
+            }     
         }
 
         @media(min-width: $desktop) {

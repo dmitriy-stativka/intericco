@@ -118,4 +118,72 @@ function cp_scripts() {
 	wp_enqueue_script('jquery');
 }
 
-// animate end
+add_action('init', 'register_post_types');
+ function register_post_types(){
+
+
+
+  register_post_type('menu', array(
+    'labels'             => array(
+      'name'               => 'Меню', // Основное название типа записи
+      'singular_name'      => 'Меню', // отдельное название записи типа Book
+      'add_new'            => 'Добавить меню',
+      'add_new_item'       => 'Добавить новое меню',
+      'edit_item'          => 'Редактировать меню',
+      'new_item'           => 'Новое меню',
+      'view_item'          => 'Посмотреть меню',
+      'search_items'       => 'Найти меню',
+      'not_found'          => 'Не найдено',
+      'not_found_in_trash' => 'В корзине ничего не найдено',
+      'parent_item_colon'  => '',
+      'menu_name'          => 'Меню'
+      ),
+    'public'             => true,
+    'publicly_queryable' => true,
+    'show_ui'            => true,
+    'show_in_menu'       => true,
+    'query_var'          => true,
+    'rewrite'            => true,
+    'capability_type'    => 'post',
+    'has_archive'        => false,
+    'hierarchical'       => false,
+    'menu_position'      => null,
+    'supports'            => array( 'title', 'comments'  )  // 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields',
+  ));
+
+
+
+
+
+
+  register_post_type('design', array(
+    'labels'             => array(
+      'name'               => 'Дизайн', // Основное название типа записи
+      'singular_name'      => 'Дизайн', // отдельное название записи типа Book
+      'add_new'            => 'Добавить дизайн',
+      'add_new_item'       => 'Добавить новый дизайн',
+      'edit_item'          => 'Редактировать дизайн',
+      'new_item'           => 'Новый дизайн',
+      'view_item'          => 'Посмотреть дизайн',
+      'search_items'       => 'Найти дизайн',
+      'not_found'          => 'Не найдено',
+      'not_found_in_trash' => 'В корзине ничего не найдено',
+      'parent_item_colon'  => '',
+      'menu_name'          => 'Дизайн'
+      ),
+    'public'             => true,
+    'publicly_queryable' => true,
+    'show_ui'            => true,
+    'show_in_menu'       => true,
+    'query_var'          => true,
+    'rewrite'            => true,
+    'capability_type'    => 'post',
+    'has_archive'        => false,
+    'hierarchical'       => false,
+    'menu_position'      => null,
+    'supports'            => array( 'title', 'comments'  )  // 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields',
+  ));
+
+
+
+}
