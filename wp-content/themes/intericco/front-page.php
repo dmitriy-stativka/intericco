@@ -265,43 +265,46 @@ Template Name: Front-page
 
         <div class="service-middle-main">
   
-            <a class="service-middle-main-block">
-              <div style="background: url(/wp-content/themes/intericco/images/service-img.jpg); background-size: cover;" class="service-middle-main-block-bg"></div>
-              <div class="middle-main-block-number">01</div>
-              <h2 class="middle-main-block-title">Дизайн</h2>
-              <p class="middle-main-block-text">Мы несомненно лидеры на рынке дизайна.
-                Поэтому именно нам нужно доверить ваш
-                ответственный проект. Мы несомненно
-                лидеры на рынке дизайна. Поэтому именно
-                н</p>
-              <div class="middle-main-block-bottom">
-                <span class="tripple-btn tripple-btn-medium">
-                  <span class="tripple-btn-first"></span>
-                  <span class="tripple-btn-second"></span>
-                  <span class="tripple-btn-third"></span>
-                  <h3 class="tripple-btn-title">Подробнее</h3>
-                </span>
-              </div>
-            </a>
+        <?php
+                $params = array(
+                    'post_type' => 'services',
+                    'posts_per_page' => 2
+                );
+                $query = new WP_Query( $params );
+                ?>
+                <?php if($query->have_posts()): ?>
+
+                  <?php $numb = 00; ?>
+
+                    
+                    <?php while ($query->have_posts()): $query->the_post() ?>
+                        <?php 
+                            $imgmini = get_field('min_img')['url'];  
+                            $minidesc = get_field('mini_desc');  
+                            $link = get_field('link');  
+                            $numb ++;
+                        ?>
+
+                        <a class="service-middle-main-block" href="<?php echo $link;?>">
+                          <div style="background: url(<?php echo $imgmini;?>); background-size: cover;" class="service-middle-main-block-bg"></div>
+                          <div class="middle-main-block-number">0<?php echo $numb;?></div>
+                          <h2 class="middle-main-block-title"><?php the_title();?></h2>
+                          <p class="middle-main-block-text"><?php echo $minidesc;?></p>
+                          <div class="middle-main-block-bottom">
+                            <span class="tripple-btn tripple-btn-medium">
+                              <span class="tripple-btn-first"></span>
+                              <span class="tripple-btn-second"></span>
+                              <span class="tripple-btn-third"></span>
+                              <h3 class="tripple-btn-title">Подробнее</h3>
+                            </span>
+                          </div>
+                        </a>
+                        
+                        <?php endwhile; ?>
+                <?php endif; 
+            ?>
   
-            <a class="service-middle-main-block">
-              <div style="background: url(/wp-content/themes/intericco/images/service-img.jpg); background-size: cover;" class="service-middle-main-block-bg"></div>
-              <div class="middle-main-block-number">01</div>
-              <h2 class="middle-main-block-title">Дизайн</h2>
-              <p class="middle-main-block-text">Мы несомненно лидеры на рынке дизайна.
-                Поэтому именно нам нужно доверить ваш
-                ответственный проект. Мы несомненно
-                лидеры на рынке дизайна. Поэтому именно
-                н</p>
-              <div class="middle-main-block-bottom">
-                <span class="tripple-btn tripple-btn-medium">
-                  <span class="tripple-btn-first"></span>
-                  <span class="tripple-btn-second"></span>
-                  <span class="tripple-btn-third"></span>
-                  <h3 class="tripple-btn-title">Подробнее</h3>
-                </span>
-              </div>
-            </a>
+           
   
           <div class="service-button-next"><svg class="icon"><use xlink:href="#arrow-down"></svg></div>
   
@@ -350,7 +353,7 @@ Template Name: Front-page
             </div>     
         </div>
 
-        <a class="news-middle-top-link" href="#">НАШИ НОВОСТИ</a>
+        <a class="news-middle-top-link" href="/blog">НАШИ НОВОСТИ</a>
 
       </div>
 
@@ -359,61 +362,40 @@ Template Name: Front-page
 
           <div class="swiper-wrapper">
 
-              <div class="swiper-slide">
-                <img src="/wp-content/themes/intericco/images/design-slide.jpg">
-                <span class="slide-date">27.10.2020</span>
-                <h3 class="slide-title">Наш офис теперь и в Харькове!</h3>
-                <a href="#" class="tripple-btn tripple-btn-bigger">
-                  <span class="tripple-btn-first"></span>
-                  <span class="tripple-btn-second"></span>
-                  <span class="tripple-btn-third"></span>
-                  <h3 class="tripple-btn-title">Читать дальше</h3>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <img src="/wp-content/themes/intericco/images/design-slide.jpg">
-                <span class="slide-date">27.10.2020</span>
-                <h3 class="slide-title">Наш офис теперь и в Харькове!</h3>
-                <a href="#" class="tripple-btn tripple-btn-bigger">
-                  <span class="tripple-btn-first"></span>
-                  <span class="tripple-btn-second"></span>
-                  <span class="tripple-btn-third"></span>
-                  <h3 class="tripple-btn-title">Читать дальше</h3>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <img src="/wp-content/themes/intericco/images/design-slide.jpg">
-                <span class="slide-date">27.10.2020</span>
-                <h3 class="slide-title">Наш офис теперь и в Харькове!</h3>
-                <a href="#" class="tripple-btn tripple-btn-bigger">
-                  <span class="tripple-btn-first"></span>
-                  <span class="tripple-btn-second"></span>
-                  <span class="tripple-btn-third"></span>
-                  <h3 class="tripple-btn-title">Читать дальше</h3>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <img src="/wp-content/themes/intericco/images/design-slide.jpg">
-                <span class="slide-date">27.10.2020</span>
-                <h3 class="slide-title">Наш офис теперь и в Харькове!</h3>
-                <a href="#" class="tripple-btn tripple-btn-bigger">
-                  <span class="tripple-btn-first"></span>
-                  <span class="tripple-btn-second"></span>
-                  <span class="tripple-btn-third"></span>
-                  <h3 class="tripple-btn-title">Читать дальше</h3>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <img src="/wp-content/themes/intericco/images/design-slide.jpg">
-                <span class="slide-date">27.10.2020</span>
-                <h3 class="slide-title">Наш офис теперь и в Харькове!</h3>
-                <a href="#" class="tripple-btn tripple-btn-bigger">
-                  <span class="tripple-btn-first"></span>
-                  <span class="tripple-btn-second"></span>
-                  <span class="tripple-btn-third"></span>
-                  <h3 class="tripple-btn-title">Читать дальше</h3>
-                </a>
-              </div>
+          <?php
+                $params = array(
+                    'post_type' => 'blog',
+                    'posts_per_page' => -1
+                );
+                $query = new WP_Query( $params );
+                ?>
+                <?php if($query->have_posts()): ?>
+                    
+                    <?php while ($query->have_posts()): $query->the_post() ?>
+                        <?php $imgmini = get_field('img_mini')['url']; 
+                    ?>
+
+                      <div class="swiper-slide">
+                        <img src="<?php echo $imgmini;?>">
+                        <span class="slide-date"><?php echo get_the_date('d.m.Y'); ?></span>
+                        <h3 class="slide-title"><?php the_title();?></h3>
+                        <a href="#" class="tripple-btn tripple-btn-bigger">
+                          <span class="tripple-btn-first"></span>
+                          <span class="tripple-btn-second"></span>
+                          <span class="tripple-btn-third"></span>
+                          <h3 class="tripple-btn-title">Читать дальше</h3>
+                        </a>
+                      </div>
+                        <?php endwhile; ?>
+                <?php endif; 
+            ?>
+
+
+
+
+              
+
+
           </div>
           <div class="slider-scrollbar"></div>
           <div class="swiper-pagination">

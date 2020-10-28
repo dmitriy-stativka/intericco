@@ -1,34 +1,35 @@
 <?php
-/*
-Template Name: blog-single
-*/
+/**
+ * The template for displaying all single posts
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ *
+ * @package utg
+ */
 
- get_header(); ?>
+get_header(); ?>
 
-<?php include("menu.php") ?> 
+<?php include("menu.php");
+        $image_bg = get_field('image')['url'];
+?> 
 
-<section style="background: url(/wp-content/themes/intericco/images/front-page-bg.jpg) no-repeat top center; background-size: cover;" class="top-site top-site-with-crumbs"> 
+<section style="background: url(<?php echo $image_bg; ?>) no-repeat top center; background-size: cover;" class="top-site top-site-with-crumbs"> 
     <div class="top-crumbs">   
         <div class="crumbs-item">
            <a href="#">блог</a>           
         </div>    
         <div class="crumbs-last">
-           <span>Мы открываемся</span>           
+           <span><?php the_title();?></span>           
         </div>
     </div>  
     <div class="top-site-middle">
         <h1 class="top-site-middle-title">
-        <strong>Мы создаём</strong>
-        безупречные интерьеры.
+            <?php the_title();?>
         </h1>
-        <p class="top-site-middle-text">Lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-            lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-            lorem ipsum lorem ipsum lorem ipsum lorem
-            lorem ipsum lorem ipsum lorem ipsum 
-            lorem ipsum lorem ipsum lorem</p>
+        <p class="top-site-middle-text"><?php the_field('mini_desc') ?></p>
         <div class="top-site-middle-bottom">
         <a href="#" class="main-link top-site-middle-bottom-link">Доверить нам проект</a>
-        <p class="date">20.07.2020</p>
+        <p class="date"><?php echo get_the_date('d.m.Y'); ?></p>
         </div>
     </div>
     <a href="#" class="text-with-logo">
@@ -64,10 +65,10 @@ Template Name: blog-single
         <div class="blog-single-main-right-container">
             <div class="blog-single-main-top">
                 <div class="blog-single-main-top-date">
-                    <span class="date">20.07.2020</span>
+                    <span class="date"><?php echo get_the_date('d.m.Y'); ?></span>
                 </div>
                 <div class="blog-single-main-top-moment">
-                    <div class="moment-left">
+                    <!-- <div class="moment-left">
                         <span>Момент</span>
                         <div class="tripple-btn tripple-btn-small">
                             <span class="tripple-btn-first"></span>
@@ -80,14 +81,14 @@ Template Name: blog-single
                             Возвращаемся с продолжением темы летнего сада. В прошлой статье мы рассказывали как правильно выбрать тротуарную        
                             Возвращаемся с продолжением темы летнего сада. В прошлой статье мы рассказывали как правильно выбрать тротуарную        
                             Возвращаемся с продолжением темы летнего сада. В прошлой статье мы рассказывали как правильно выбрать тротуарную</p>
-                    </div>
+                    </div> -->
                     <div class="moment-text-bg">
                         <span>БЛОГ</span>
                     </div>
                 </div>
             </div>
             <div class="blog-single-main-middle">
-                <p>
+                <!-- <p>
                     Сегодня вы узнаете особенности декоративных растений и как правильно их подобрать для своего сада.
                 </p>
 
@@ -125,7 +126,10 @@ Template Name: blog-single
                     <div class="design-icon"><img src="/wp-content/themes/intericco/images/small-design-icon.svg" alt=""></div>
                 </div>
                 <p>С уважением,<br>
-                    команда дизайнеров Intericco.</p>
+                    команда дизайнеров Intericco.</p> -->
+
+                    <?php the_field('description');?>
+
             </div>
         </div>
     </div>

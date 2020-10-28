@@ -186,4 +186,70 @@ add_action('init', 'register_post_types');
 
 
 
+
+
+  register_post_type('services', array(
+    'labels'             => array(
+      'name'               => 'Услуги', // Основное название типа записи
+      'singular_name'      => 'Услуги', // отдельное название записи типа Book
+      'add_new'            => 'Добавить услугу',
+      'add_new_item'       => 'Добавить новую услугу',
+      'edit_item'          => 'Редактировать услугу',
+      'new_item'           => 'Новая услуга',
+      'view_item'          => 'Посмотреть услугу',
+      'search_items'       => 'Найти услугу',
+      'not_found'          => 'Не найдено',
+      'not_found_in_trash' => 'В корзине ничего не найдено',
+      'parent_item_colon'  => '',
+      'menu_name'          => 'Услуги'
+      ),
+    'public'             => true,
+    'publicly_queryable' => true,
+    'show_ui'            => true,
+    'show_in_menu'       => true,
+    'query_var'          => true,
+    'rewrite'            => true,
+    'capability_type'    => 'post',
+    'has_archive'        => false,
+    'hierarchical'       => false,
+    'menu_position'      => null,
+    'supports'            => array( 'title', 'comments'  )  // 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields',
+  ));
+
+
+
+
+
+
+
+
+  register_post_type('blog', array(
+    'labels'             => array(
+      'name'               => 'Блог', // Основное название типа записи
+      'singular_name'      => 'Блог', // отдельное название записи типа Book
+      'add_new'            => 'Добавить статью',
+      'add_new_item'       => 'Добавить новую статью',
+      'edit_item'          => 'Редактировать статью',
+      'new_item'           => 'Новая статья',
+      'view_item'          => 'Посмотреть статью',
+      'search_items'       => 'Найти статью',
+      'not_found'          => 'Не найдено',
+      'not_found_in_trash' => 'В корзине ничего не найдено',
+      'parent_item_colon'  => '',
+      'menu_name'          => 'Блог'
+      ),
+    'public'             => true,
+    'publicly_queryable' => true,
+    'show_ui'            => true,
+    'show_in_menu'       => true,
+    'query_var'          => true,
+    'rewrite'            => true,
+    'capability_type'    => 'post',
+    'has_archive'        => false,
+    'hierarchical'       => false,
+    'menu_position'      => null,
+    'supports'            => array( 'title', 'comments'  )  // 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields',
+  ));
+
+
 }

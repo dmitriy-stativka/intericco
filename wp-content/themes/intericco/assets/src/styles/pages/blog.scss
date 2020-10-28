@@ -70,11 +70,7 @@
                 .swiper-container{
                     position: initial;
 
-                    .swiper-slide{
-                        display: flex;
-                        flex-wrap: wrap;
-                        justify-content: space-between;
-                        padding: 30px 30px;                                              
+                                                                 
 
                         .blog-item{
                             display: flex;
@@ -123,6 +119,7 @@
                                 align-items: center;
                                 padding-left: 15px;
                                 margin-bottom: 30px;
+                                width: 100%;
 
                                 h3{
                                     font-family: "Gotham Pro", sans-serif;
@@ -206,6 +203,7 @@
                                 justify-content: space-between;
                                 align-items: center;
                                 padding-left: 25px;
+                                width: 100%;
 
                                 .tripple-btn{
 
@@ -265,7 +263,7 @@
                                 }
                             }
                         }
-                    }
+                    
 
                     .swiper-pagination{
                         display: flex;
@@ -480,4 +478,9 @@
             }
         }
     }
+}
+
+
+.swiper-container-multirow-column > .swiper-wrapper{
+    flex-direction: row!important;
 }

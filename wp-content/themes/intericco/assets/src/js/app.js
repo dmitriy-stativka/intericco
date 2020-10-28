@@ -50,15 +50,17 @@ $(document).ready(function () {
         //
         slidesPerView: 1,
         //
-        centeredSlides: true,
+        centeredSlides: false,
         //
         grabCursor: true,
       });
 
       var mySwiper = new Swiper(".blog-slider-container", {
         // Optional parameters
+        slidesPerView: 2,
+        slidesPerColumn: 2,
         direction: "horizontal",
-        loop: true,
+        // loop: true,
         speed: 500,
       
         // If we need pagination
@@ -81,12 +83,12 @@ $(document).ready(function () {
     
     //menu
     $(".menu-left-top").click(function() {
-      $("body").addClass("menu-opened");
+      // $("body").addClass("menu-opened");
       $(".navigation").addClass("navigation-open");
     })
 
     $(".menu-left-top-burger-close").click(function() {
-      $("body").removeClass("menu-opened");
+      // $("body").removeClass("menu-opened");
       $(".navigation").removeClass("navigation-open");
     })
     
