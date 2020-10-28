@@ -37,9 +37,9 @@ Template Name: blog
                         <div class="blog-item-title">
                             <h3>Новый проект готов</h3>
                             <div class="tripple-btn tripple-btn-small">
-                                    <span class="tripple-btn-first"></span>
-                                    <span class="tripple-btn-second"></span>
-                                    <span class="tripple-btn-third"></span>                           
+                                <span class="tripple-btn-first"></span>
+                                <span class="tripple-btn-second"></span>
+                                <span class="tripple-btn-third"></span>                           
                             </div>
                         </div>
                         <div class="blog-item-img">
