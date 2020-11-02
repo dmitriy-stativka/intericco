@@ -39,56 +39,85 @@
 
             .crumbs-last{
 
-                span{
-                    font-family: "Gotham Pro", sans-serif;
-                    font-style: normal;
-                    font-weight: normal;
-                    font-size: 16px;
-                    color: white;
-                    text-transform: initial;
-                }
+        .crumbs-item{    
+            display: flex;
+            align-items: center;         
 
-                &:before{
-                    color: white;
-                    font-size: 18px;
-                }
+            span{
+                font-family: "Gotham Pro", sans-serif;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 30px;
+                color: white;
+                text-transform: uppercase;
             }
 
             &:before{
-                display: none;
+                display: block;
+                content: "/";
+                color: white;
+                margin-right: 15px;
             }
         }
 
-        .top-site-middle{
+        .crumbs-last{
 
-            .top-site-middle-text{
+            span{
                 font-family: "Gotham Pro", sans-serif;
                 font-style: normal;
                 font-weight: normal;
                 font-size: 16px;
                 color: white;
-                line-height: 25px;
-                max-width: 50%;
+                text-transform: initial;
+            }
+
+            &:before{
+                color: white;
+                font-size: 18px;
             }
         }
 
-        .top-site-middle-bottom{
-
-            .date{
-                border-left: none;
-            }
+        &:before{
+            display: none;
         }
+    }
 
-        .text-with-logo{
-            position: absolute;
-            right: -60px;
-            top: 350px;
-            z-index: 11;
+    .top-site-middle{
 
-            span{
-                color: #FFFFFF;
-            }
+        .top-site-middle-text{
+            font-family: "Gotham Pro", sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            color: white;
+            line-height: 25px;
+            max-width: 50%;
         }
+    }
+
+    .top-site-middle-bottom{
+
+        .date{
+            border-left: none;
+        }
+    }
+
+    .text-with-logo{
+        position: absolute;
+        right: -60px;
+        top: 350px;
+        z-index: 11;
+
+        span{
+            color: #FFFFFF;
+        }
+    }
+}
+
+.page-template-blog-single{
+
+    .header{
+        display: none;
     }
 
     .blog-single-main{
