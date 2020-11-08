@@ -77,27 +77,38 @@ Template Name: Front-page
 
           <div class="swiper-wrapper">
 
-              <?php
-                $params = array(
-                    'post_type' => 'design',
-                    'posts_per_page' => -1
-                );
-                $query = new WP_Query( $params );
-                ?>
-                <?php if($query->have_posts()): ?>
-                    
-                    <?php while ($query->have_posts()): $query->the_post() ?>
-                        <?php $miniImg = get_field('mini_img');  
-                        ?>
+                <?php
+                  $params = array(
+                      'post_type' => 'design',
+                      'tax_query' => array(
+                        array(
+                            'taxonomy' => 'kategoriya',
+                            'field'    => 'kategoriya',
+                            'terms'    => 'kategoriya',
+                        )
+                      ),
+                      'posts_per_page' => -1
+                  );
+                  $query = new WP_Query( $params );
+                  ?>
+                  <?php if($query->have_posts()): ?>
+                      
+                      <?php while ($query->have_posts()): $query->the_post() ?>
+                        <?php $miniImg = get_field('miniatyura');  ?>
 
-                        <div class="swiper-slide">
-                          <img src="<?php echo $miniImg['url']?>">
-                          <h3 class="slide-title"><?php the_title();?></h3>
-                        </div>
-                        
-                        <?php endwhile; ?>
-                <?php endif; 
-            ?>
+                          <div class="swiper-slide">
+                            <img src="<?php echo $miniImg['url']?>">
+                            <h3 class="slide-title"><?php the_title();?></h3>
+                          </div>
+
+                      <?php endwhile; ?>
+                  <?php endif; 
+                ?>
+
+
+
+               
+
 
           </div>
           <div class="swiper-pagination">

@@ -2,6 +2,9 @@
 
 $(document).ready(function () {
 
+    $('#design-tab1').prop('checked', true);
+
+
     
     var mySwiper = new Swiper ('.swiper-main', {
         speed: 400,
@@ -117,6 +120,7 @@ $(document).ready(function () {
       $(".show-more-text").addClass("show-more-text-open");
     })
     
+    
 
 });
 
@@ -155,3 +159,4 @@ $(document).ready(function () {
 //     result = res.slice(res.indexOf(res[0]), res.indexOf(res[i]));
 //   }
 // }
+

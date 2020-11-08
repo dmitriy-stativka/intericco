@@ -39,46 +39,48 @@
 
             .crumbs-last{
 
-        .crumbs-item{    
-            display: flex;
-            align-items: center;         
+                .crumbs-item{    
+                    display: flex;
+                    align-items: center;         
 
-            span{
-                font-family: "Gotham Pro", sans-serif;
-                font-style: normal;
-                font-weight: bold;
-                font-size: 30px;
-                color: white;
-                text-transform: uppercase;
+                    span{
+                        font-family: "Gotham Pro", sans-serif;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 30px;
+                        color: white;
+                        text-transform: uppercase;
+                    }
+
+                    &:before{
+                        display: block;
+                        content: "/";
+                        color: white;
+                        margin-right: 15px;
+                    }
+                }
+
+                .crumbs-last{
+
+                    span{
+                        font-family: "Gotham Pro", sans-serif;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 16px;
+                        color: white;
+                        text-transform: initial;
+                    }
+
+                    &:before{
+                        color: white;
+                        font-size: 18px;
+                    }
+                }
+
+                &:before{
+                    display: none;
+                }
             }
-
-            &:before{
-                display: block;
-                content: "/";
-                color: white;
-                margin-right: 15px;
-            }
-        }
-
-        .crumbs-last{
-
-            span{
-                font-family: "Gotham Pro", sans-serif;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 16px;
-                color: white;
-                text-transform: initial;
-            }
-
-            &:before{
-                color: white;
-                font-size: 18px;
-            }
-        }
-
-        &:before{
-            display: none;
         }
     }
 

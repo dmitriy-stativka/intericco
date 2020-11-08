@@ -69,11 +69,12 @@
 
               .design-tabs-labels{
                 display: flex;
+                justify-content: space-between;
                 border: 1px solid #E1E1E1;
                 margin-bottom: 75px;
 
                 li{
-                  width: calc(100%/5);
+                  width: 100%;
 
                   label{
                     display: block;
@@ -168,6 +169,7 @@
                     max-width: 32%;
                     max-height: 420px;
                     min-height: 420px;
+                    width: 100%;
                     position: relative;
                     z-index: 1;              
                     padding: 0 60px 40px 30px;   

@@ -181,6 +181,7 @@ add_action('init', 'register_post_types');
     'has_archive'        => false,
     'hierarchical'       => false,
     'menu_position'      => null,
+    'taxonomies'          => array( 'kategoriya' ),
     'supports'            => array( 'title', 'comments'  )  // 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields',
   ));
 
@@ -253,3 +254,5 @@ add_action('init', 'register_post_types');
 
 
 }
+
+

@@ -185,6 +185,11 @@
                             font-size: 23px;
                             font-weight: bold;
                             transition: color 0.3s ease;
+                            max-width: 180px; 
+                            display: block;
+                            margin: 0 auto;
+                            text-align: center;
+                            line-height: 159.5%;
                         }
 
                         .link-content-sub{

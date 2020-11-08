@@ -25,103 +25,194 @@ get_header(); ?>
         </div>
 
         <div class="design-tabs">
-          <input checked="checked" id="design-tab1" type="radio" name="design" />
-          <input id="design-tab2" type="radio" name="design" />
-          <input id="design-tab3" type="radio" name="design" />
-          <input id="design-tab4" type="radio" name="design" />
-          <input id="design-tab5" type="radio" name="design" />
+          
+              <?php 
+                $terms = get_terms(
+                  array(
+                    'taxonomy'   => 'kategoriya',
+                    'hide_empty' => true,
+                    'hierarchical' => false,
+                    'orderby' => 'name',
+                    'order' => 'ASC',
+                  )
+                );
+                $categoryNumbs = count($terms); ?>
+
+                <?php
+
+                $nunbOfCategory;
+
+                foreach (  $terms as $categoryNumb ) { 
+                  $nunbOfCategory++;
+                  ?>
+                  
+                    <input id="design-tab<?php echo $nunbOfCategory;?>" type="radio" name="design" />
+
+              <?php }?>
       
             <ul class="design-tabs-labels">
-              <li class="tab1">
-                <label for="design-tab1">Квартиры</label>
-              </li>
-              <li class="tab2">
-                <label for="design-tab2">Дома</label>
-              </li>
-              <li class="tab3">
-                <label for="design-tab3">Кафе</label>
-              </li>
-              <li class="tab4">
-                <label for="design-tab4">Офисы</label>
-              </li>
-              <li class="tab5">
-                <label for="design-tab5">Квартиры</label>
-              </li>
+              <?php 
+                $terms = get_terms(
+                  array(
+                    'taxonomy'   => 'kategoriya',
+                    'hide_empty' => true,
+                    'hierarchical' => false,
+                    'orderby' => 'name',
+                    'order' => 'ASC',
+                  )
+                );
+                $number;
+                foreach ( $terms as $term ) { 
+                  $number++;
+                  ?>
+                  <li class="tab<?php echo $number;?>">
+                    <label for="design-tab<?php echo $number;?>"><?php echo $term->name; ?></label>
+                  </li>
+                <?php } ?>
             </ul>
     
             <section class="tabs-content-container">
-
               <span class="line line-purple"></span>
               <span class="line line-corner"></span>
               <span class="line line-blue"></span>  
-
               <div class="design-icon"><img src="/wp-content/themes/intericco/images/design-icon.svg" alt=""></div>
 
-              <div class="tabs-block block-tab1">
+              <?php 
+                $terms = get_terms(
+                  array(
+                    'taxonomy'   => 'kategoriya',
+                    'hide_empty' => true,
+                    'hierarchical' => false,
+                    'orderby' => 'name',
+                    'order' => 'ASC',
+                  )
+                );
+               
+                  $categoryNumbs = count($terms);
+                  $totot = -1;
+                  foreach ($terms as $categoryNumbs ) { 
+                    $totot++;
+                    $oooo = $terms[$totot]->term_taxonomy_id;
+                    $lolo;
+                    $lolo++;
+                    ?>
+                      <div class="tabs-block block-tab<?php echo $lolo;?>">
+                      <?php
+                        $tax = $oooo;
+                        $params = array(
+                            'post_type' => 'design',
+                            'tax_query' => array(
+                              array(
+                                  'taxonomy' => 'kategoriya',
+                                  'field'     => 'term_id',
+                                  'terms'     => $tax,
+                              )
+                            ),
+                            'posts_per_page' => -1
+                        );
+                        $query = new WP_Query( $params );
+                        ?>
+                        <?php if($query->have_posts()): ?>
+                            
+                            <?php while ($query->have_posts()): $query->the_post() ?>
+                                <?php $miniImg = get_field('miniatyura');  
+                                      $opisanie = get_field('opisanie')
+                                ?>
 
-                <a href="#" style="background: url(/wp-content/themes/intericco/images/tabs-bg.jpg); background-size: cover;" class="tabs-block-item">
-                  <h2>Дизайн квартиры</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut impedit reprehenderit in doloribus repudiandae necessitatibus harum soluta</p>
-                </a>
+                                <a href="<?php the_permalink();?>" style="background: url(<?php echo $miniImg['url']?>); background-size: cover;" class="tabs-block-item">
+                                  <h2><?php the_title();?></h2>
+                                  <p><?php echo $opisanie;?></p>
+                                </a>
 
-                <a href="#" style="background: url(/wp-content/themes/intericco/images/tabs-bg.jpg); background-size: cover;" class="tabs-block-item">
-                  <h2>Дизайн квартиры</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut impedit reprehenderit in doloribus repudiandae necessitatibus harum soluta</p>
-                </a>
+                                <?php endwhile; ?>
+                        <?php endif; 
+                      ?>
 
-                <a href="#" style="background: url(/wp-content/themes/intericco/images/tabs-bg.jpg); background-size: cover;" class="tabs-block-item">
-                  <h2>Дизайн квартиры</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut impedit reprehenderit in doloribus repudiandae necessitatibus harum soluta</p>
-                </a>
 
-                <a href="#" style="background: url(/wp-content/themes/intericco/images/tabs-bg.jpg); background-size: cover;" class="tabs-block-item">
-                  <h2>Дизайн квартиры</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut impedit reprehenderit in doloribus repudiandae necessitatibus harum soluta</p>
-                </a>
+                      </div>
 
-                <a href="#" style="background: url(/wp-content/themes/intericco/images/tabs-bg.jpg); background-size: cover;" class="tabs-block-item">
-                  <h2>Дизайн квартиры</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut impedit reprehenderit in doloribus repudiandae necessitatibus harum soluta</p>
-                </a>
+                  <?php } ?>
 
-                <a href="#" style="background: url(/wp-content/themes/intericco/images/tabs-bg.jpg); background-size: cover;" class="tabs-block-item">
-                  <h2>Дизайн квартиры</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut impedit reprehenderit in doloribus repudiandae necessitatibus harum soluta</p>
-                </a>
+
+
+
+
+
+
+
+
+
+
+
+
+              <!-- <div class="tabs-block block-tab1">
+
+                <?php
+                  $tax = array(10,18);
+                  $params = array(
+                      'post_type' => 'design',
+                      'tax_query' => array(
+                        array(
+                            'taxonomy' => 'kategoriya',
+                            'field'     => 'term_id',
+                            'terms'     => $tax,
+                        )
+                      ),
+                      'posts_per_page' => -1
+                  );
+                  $query = new WP_Query( $params );
+                  ?>
+                  <?php if($query->have_posts()): ?>
+                      
+                      <?php while ($query->have_posts()): $query->the_post() ?>
+                          <?php $miniImg = get_field('miniatyura');  
+                                $opisanie = get_field('opisanie')
+                          ?>
+
+                          <a href="#" style="background: url(<?php echo $miniImg['url']?>); background-size: cover;" class="tabs-block-item">
+                            <h2><?php the_title();?></h2>
+                            <p><?php echo $opisanie;?></p>
+                          </a>
+
+                          <?php endwhile; ?>
+                  <?php endif; 
+                ?>
 
               </div>
 
               <div class="tabs-block block-tab2">
                 
-                <a href="#" style="background: url(/wp-content/themes/intericco/images/tabs-bg.jpg); background-size: cover;" class="tabs-block-item">
-                  <h2>Дизайн квартиры</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut impedit reprehenderit in doloribus repudiandae necessitatibus harum soluta</p>
-                </a>
+                <?php
+                  $tax = array(12,20);
+                  $params = array(
+                      'post_type' => 'design',
+                      'tax_query' => array(
+                        array(
+                            'taxonomy' => 'kategoriya',
+                            'field'     => 'term_id',
+                            'terms'     => $tax,
+                        )
+                      ),
+                      'posts_per_page' => -1
+                  );
+                  $query = new WP_Query( $params );
+                  ?>
+                  <?php if($query->have_posts()): ?>
+                      
+                      <?php while ($query->have_posts()): $query->the_post() ?>
+                          <?php $miniImg = get_field('miniatyura');  
+                                $opisanie = get_field('opisanie')
+                          ?>
 
-                <a href="#" style="background: url(/wp-content/themes/intericco/images/tabs-bg.jpg); background-size: cover;" class="tabs-block-item">
-                  <h2>Дизайн квартиры</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut impedit reprehenderit in doloribus repudiandae necessitatibus harum soluta</p>
-                </a>
+                          <a href="#" style="background: url(<?php echo $miniImg['url']?>); background-size: cover;" class="tabs-block-item">
+                            <h2><?php the_title();?></h2>
+                            <p><?php echo $opisanie;?></p>
+                          </a>
 
-                <a href="#" style="background: url(/wp-content/themes/intericco/images/tabs-bg.jpg); background-size: cover;" class="tabs-block-item">
-                  <h2>Дизайн квартиры</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut impedit reprehenderit in doloribus repudiandae necessitatibus harum soluta</p>
-                </a>
-
-                <a href="#" style="background: url(/wp-content/themes/intericco/images/tabs-bg.jpg); background-size: cover;" class="tabs-block-item">
-                  <h2>Дизайн квартиры</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut impedit reprehenderit in doloribus repudiandae necessitatibus harum soluta</p>
-                </a>
-
-                <a href="#" style="background: url(/wp-content/themes/intericco/images/tabs-bg.jpg); background-size: cover;" class="tabs-block-item">
-                  <h2>Дизайн квартиры</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut impedit reprehenderit in doloribus repudiandae necessitatibus harum soluta</p>
-                </a>
-
-                <a href="#" style="background: url(/wp-content/themes/intericco/images/tabs-bg.jpg); background-size: cover;" class="tabs-block-item">
-                  <h2>Дизайн квартиры</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut impedit reprehenderit in doloribus repudiandae necessitatibus harum soluta</p>
-                </a>
+                          <?php endwhile; ?>
+                  <?php endif; 
+                ?>
+              
 
               </div>
 
@@ -225,7 +316,7 @@ get_header(); ?>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut impedit reprehenderit in doloribus repudiandae necessitatibus harum soluta</p>
                 </a>
 
-              </div>
+              </div> -->
 
             </section>
           </div>
