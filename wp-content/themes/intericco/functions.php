@@ -187,6 +187,37 @@ add_action('init', 'register_post_types');
 
 
 
+  register_post_type('architecture', array(
+    'labels'             => array(
+      'name'               => 'Архитектура', // Основное название типа записи
+      'singular_name'      => 'Архитектура', // отдельное название записи типа Book
+      'add_new'            => 'Добавить архитектуру',
+      'add_new_item'       => 'Добавить новую архитектуру',
+      'edit_item'          => 'Редактировать архитектуру',
+      'new_item'           => 'Новый архитектура',
+      'view_item'          => 'Посмотреть архитектуру',
+      'search_items'       => 'Найти архитектуру',
+      'not_found'          => 'Не найдено',
+      'not_found_in_trash' => 'В корзине ничего не найдено',
+      'parent_item_colon'  => '',
+      'menu_name'          => 'Архитектура'
+      ),
+    'public'             => true,
+    'publicly_queryable' => true,
+    'show_ui'            => true,
+    'show_in_menu'       => true,
+    'query_var'          => true,
+    'rewrite'            => true,
+    'capability_type'    => 'post',
+    'has_archive'        => false,
+    'hierarchical'       => false,
+    'menu_position'      => null,
+    'taxonomies'          => array( 'categoryarchitecture' ),
+    'supports'            => array( 'title', 'comments'  )  // 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields',
+  ));
+
+
+
 
 
   register_post_type('services', array(

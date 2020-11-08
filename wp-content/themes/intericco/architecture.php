@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Design
+Template Name: architecture
 */
 get_header(); ?>
 
@@ -15,9 +15,9 @@ get_header(); ?>
   <?php include("menu.php") ?> 
     <div class="design-container">
         <div class="top-crumbs">
-            <a class="crumbs-item" href="#">Архитектура</a>
+            <a class="crumbs-item" href="/dizajn">Дизайн</a>
             <div class="crumbs-last">
-               <span>Дизайн</span>
+               <span>Архитектура</span>
                 <span class="line line-purple"></span>
                 <span class="line line-corner"></span>
                 <span class="line line-blue"></span>  
@@ -25,11 +25,16 @@ get_header(); ?>
         </div>
 
         <div class="design-tabs">
+
+            <?php
+                wp_reset_postdata();
+                global $post;
+            ?>
           
               <?php 
                 $terms = get_terms(
                   array(
-                    'taxonomy'   => 'kategoriya',
+                    'taxonomy'   => 'categoryarchitecture',
                     'hide_empty' => true,
                     'hierarchical' => false,
                     'orderby' => 'name',
@@ -47,12 +52,17 @@ get_header(); ?>
                     <input id="design-tab<?php echo $nunbOfCategory;?>" type="radio" name="design" />
 
               <?php }?>
+
+                <?php
+                    wp_reset_postdata();
+                    global $post;
+                ?>
       
             <ul class="design-tabs-labels">
               <?php 
                 $terms = get_terms(
                   array(
-                    'taxonomy'   => 'kategoriya',
+                    'taxonomy'   => 'categoryarchitecture',
                     'hide_empty' => true,
                     'hierarchical' => false,
                     'orderby' => 'name',
@@ -78,7 +88,7 @@ get_header(); ?>
               <?php 
                 $terms = get_terms(
                   array(
-                    'taxonomy'   => 'kategoriya',
+                    'taxonomy'   => 'categoryarchitecture',
                     'hide_empty' => true,
                     'hierarchical' => false,
                     'orderby' => 'name',
@@ -98,10 +108,10 @@ get_header(); ?>
                       <?php
                         $tax = $oooo;
                         $params = array(
-                            'post_type' => 'design',
+                            'post_type' => 'architecture',
                             'tax_query' => array(
                               array(
-                                  'taxonomy' => 'kategoriya',
+                                  'taxonomy' => 'categoryarchitecture',
                                   'field'     => 'term_id',
                                   'terms'     => $tax,
                               )

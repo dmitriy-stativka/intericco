@@ -390,7 +390,7 @@ Template Name: Front-page
                         <img src="<?php echo $imgmini;?>">
                         <span class="slide-date"><?php echo get_the_date('d.m.Y'); ?></span>
                         <h3 class="slide-title"><?php the_title();?></h3>
-                        <a href="#" class="tripple-btn tripple-btn-bigger">
+                        <a href="<?php the_permalink();?>" class="tripple-btn tripple-btn-bigger">
                           <span class="tripple-btn-first"></span>
                           <span class="tripple-btn-second"></span>
                           <span class="tripple-btn-third"></span>

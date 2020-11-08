@@ -117,9 +117,9 @@
 
 
         <?php
-                wp_reset_postdata();
-                global $post;
-            ?>
+            wp_reset_postdata();
+            global $post;
+        ?>
 
 
     </div>

@@ -22,6 +22,10 @@ get_header(); ?>
             </div>
         </div>
 
+        <div class="contacts-text">
+            <?php the_content();?>
+        </div>
+
         <div class="contacts-middle">
 
             <div class="contacts-middle-left">
