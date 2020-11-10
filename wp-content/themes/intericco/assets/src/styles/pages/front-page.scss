@@ -1558,7 +1558,7 @@
       }
     }
 
-    &-right{
+   &-right{
       max-width: 15%;
       width: 100%;
       padding-top: 150px;
@@ -1611,7 +1611,7 @@
       @media(min-width: $desktop) {
         max-width: 16.7%;
       }
-    }
+    } 
   }
 }
 
