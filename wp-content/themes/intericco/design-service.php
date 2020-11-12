@@ -33,10 +33,10 @@ Template Name: service-design
 
     <div class="top-crumbs">   
         <div class="crumbs-item">
-           <a href="#">Кейс</a>           
+           <a href="#">Главная</a>           
         </div>    
         <div class="crumbs-last">
-           <span>квартиры</span>           
+           <span>Дизайн интерьера</span>           
         </div>
     </div>  
     <div class="top-site-middle">
