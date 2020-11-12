@@ -2,6 +2,7 @@
 
 $(document).ready(function () {
 
+  $('#design-tab1').prop('checked', true);
 
       var mySwiper2 = new Swiper(".blog-slider-container", {
         // Optional parameters
