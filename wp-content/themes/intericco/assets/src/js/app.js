@@ -2,63 +2,8 @@
 
 $(document).ready(function () {
 
-    $('#design-tab1').prop('checked', true);
 
-
-    
-    var mySwiper = new Swiper ('.swiper-main', {
-        speed: 400,
-        spaceBetween: 100,
-        //truewrapper adoptsheight of active slide
-        autoHeight: false,
-        // Optional parameters
-        direction: 'horizontal',
-        loop: true,
-        // delay between transitions in ms
-        autoplay: 5000,
-        autoplayStopOnLast: false, // loop false also
-        // If we need pagination
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
-                  clickable: true,
-                renderBullet: function (index, className) {
-                    return '<span class="' + className + '">' + ('0' + (index + 1)) + '</span>';
-                },
-          },     
-        scrollbar: {
-          el: '.slider-scrollbar',
-          draggable: true,
-          snapOnRelease: true
-        },
-        
-        // Navigation arrows
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-
-          breakpoints: {
-            1024: {
-              slidesPerView: 3
-            }
-          },
-        
-        // And if we need scrollbar
-        //scrollbar: '.swiper-scrollbar',
-        // "slide", "fade", "cube", "coverflow" or "flip"
-        effect: 'slide',
-        // Distance between slides in px.
-        spaceBetween: 60,
-        //
-        slidesPerView: 1,
-        //
-        centeredSlides: false,
-        //
-        grabCursor: true,
-      });
-
-      var mySwiper = new Swiper(".blog-slider-container", {
+      var mySwiper2 = new Swiper(".blog-slider-container", {
         // Optional parameters
         slidesPerView: 2,
         slidesPerColumn: 2,
@@ -100,10 +45,7 @@ $(document).ready(function () {
                     return '<span class="' + className + '">' + ('0' + (index + 1)) + '</span>';
                 },
           }
-        });
-
-      
-      
+        });      
     
     //menu
     $(".menu-left-top").click(function() {
@@ -119,6 +61,58 @@ $(document).ready(function () {
     $(".show-more").click(function() {
       $(".show-more-text").addClass("show-more-text-open");
     })
+
+    const accordion = document.getElementsByClassName('content-box');
+
+    for (let i = 0; i < accordion.length; i++ ) {
+      accordion[i].addEventListener('click', function() {
+        this.classList.toggle('active');
+      });
+    }
+
+    var mySwiper = new Swiper ('.swiper-main', {
+      speed: 400,
+      spaceBetween: 100,
+      autoHeight: false,
+      direction: 'horizontal',
+      loop: true,
+      autoplay: 5000,
+      autoplayStopOnLast: false,
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + ('0' + (index + 1)) + '</span>';
+        }
+      },     
+      scrollbar: {
+        el: '.slider-scrollbar',
+        draggable: true,
+        snapOnRelease: true
+      },
+      
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      breakpoints: {
+        1024: {
+          slidesPerView: 3
+        }
+      },
+
+      effect: 'slide',
+
+      spaceBetween: 60,
+      //
+      slidesPerView: 1,
+      //
+      centeredSlides: false,
+      //
+      grabCursor: true
+    });
     
     
 
