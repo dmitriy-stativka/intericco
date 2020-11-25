@@ -10,18 +10,13 @@ Template Name: service-design
 <section class="top-site top-site-service-design top-site-with-crumbs"> 
 
     <div class="swiper-container swiper-bg">
-
         <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-                <img src="/wp-content/themes/intericco/images/front-page-bg.jpg" alt="">
-            </div>
-            <div class="swiper-slide">
-                <img src="/wp-content/themes/intericco/images/front-page-bg.jpg" alt="">
-            </div>
-            <div class="swiper-slide">
-                <img src="/wp-content/themes/intericco/images/front-page-bg.jpg" alt="">
-            </div>
+            <?php while ( have_rows('galereya') ) : the_row(); ?>
+                <?php $image = get_sub_field('image')['url']; ?>
+                <div class="swiper-slide">
+                    <img src="<?php echo $image;?>" alt="">
+                </div>
+            <?php endwhile; ?>
         </div>
 
         <div class="swiper-pagination">
@@ -40,10 +35,7 @@ Template Name: service-design
         </div>
     </div>  
     <div class="top-site-middle">
-        <h1 class="top-site-middle-title">
-            Обустройство квартиры 
-            Сергея Шнурова
-        </h1>
+        <h1 class="top-site-middle-title"> <?php the_field('title'); ?> </h1>
         <div class="design-icon"><img src="/wp-content/themes/intericco/images/design-icon.svg" alt=""></div>
     </div>
     <a href="#" class="text-with-logo">
@@ -77,37 +69,24 @@ Template Name: service-design
             </div>  
 
             <div class="stages-middle-blocks">
+                <?php
+                    $numb;
+                    while ( have_rows('we_do') ) : the_row(); $numb++?>
+                        <?php $titleWeDo = get_sub_field('title_we_do'); ?>
 
-                <div class="stages-middle-blocks-item">
-                    <h2 class="middle-blocks-item-title">Проектирование</h2>
-                    <div class="tripple-btn tripple-btn-small">
-                        <span class="tripple-btn-first"></span>
-                        <span class="tripple-btn-second"></span>
-                        <span class="tripple-btn-third"></span>                           
-                    </div>
-                    <span class="middle-blocks-item-number">01</span>
-                </div>
 
-                <div class="stages-middle-blocks-item">
-                    <h2 class="middle-blocks-item-title">Проектирование</h2>
-                    <div class="tripple-btn tripple-btn-small">
-                        <span class="tripple-btn-first"></span>
-                        <span class="tripple-btn-second"></span>
-                        <span class="tripple-btn-third"></span>                           
-                    </div>
-                    <span class="middle-blocks-item-number">01</span>
-                </div>
+                        <div class="stages-middle-blocks-item">
+                            <h2 class="middle-blocks-item-title"><?php echo $titleWeDo;?></h2>
+                            <div class="tripple-btn tripple-btn-small">
+                                <span class="tripple-btn-first"></span>
+                                <span class="tripple-btn-second"></span>
+                                <span class="tripple-btn-third"></span>                           
+                            </div>
+                            <span class="middle-blocks-item-number">0<?php echo $numb;?></span>
+                        </div>
 
-                <div class="stages-middle-blocks-item">
-                    <h2 class="middle-blocks-item-title">Проектирование</h2>
-                    <div class="tripple-btn tripple-btn-small">
-                        <span class="tripple-btn-first"></span>
-                        <span class="tripple-btn-second"></span>
-                        <span class="tripple-btn-third"></span>                           
-                    </div>
-                    <span class="middle-blocks-item-number">01</span>
-                </div>
-
+                    <?php endwhile; 
+                ?>
             </div>
         </div>
 
@@ -152,48 +131,49 @@ Template Name: service-design
         <div class="info-middle">
     
             <div class="lines-title-wrapper">
-                <h1 class="lines-title info-middle-top-title">Уникальный метод</h1>
+                <h1 class="lines-title info-middle-top-title">  <?php the_field('unikalnyj_metod_title'); ?> </h1>
                 <span class="line line-purple line-purple-mob"></span>
                 <span class="line line-corner line-corner-mob"></span>
                 <span class="line line-blue line-blue-mob"></span>        
             </div>  
  
           <div class="info-middle-main">
-            <p class="service-text">
-                Жизнь любого нашего проекта, будь то дизайн интерьера или архитектура, начинается
-                задолго до первой линии эскиза. Начало заложено в жизненном опыте заказчика.
-            </p>
+            <p class="service-text"><?php the_field('unikalnyj_metod_text'); ?></p>
             <div class="service-info-items">
 
-                <div class="service-info-items-block">
-                    <h2>АНАЛИЗ ОБЪЕКТА</h2>
-                    <div class="tripple-btn tripple-btn-small">
-                        <span class="tripple-btn-first"></span>
-                        <span class="tripple-btn-second"></span>
-                        <span class="tripple-btn-third"></span>                           
-                    </div>
-                    <span class="number">01</span>
-                </div>
+            
 
-                <div class="service-info-items-block">
-                    <h2>НЕОГРАНИЧЕННЫЕ КОНСУЛЬТАЦИИ</h2>
-                    <div class="tripple-btn tripple-btn-small">
-                        <span class="tripple-btn-first"></span>
-                        <span class="tripple-btn-second"></span>
-                        <span class="tripple-btn-third"></span>                           
-                    </div>
-                    <span class="number">02</span>
-                </div>
 
-                <div class="service-info-items-block">
-                             <h2>АНАЛИЗ ОБЪЕКТА</h2>
-                    <div class="tripple-btn tripple-btn-small">
-                        <span class="tripple-btn-first"></span>
-                        <span class="tripple-btn-second"></span>
-                        <span class="tripple-btn-third"></span>                           
-                    </div>
-                    <span class="number">03</span>
-                </div>
+
+            
+
+
+
+
+
+                <?php
+                    $numbb;
+                    while ( have_rows('spisok') ) : the_row(); $numbb++?>
+                        <?php $titleSpisok = get_sub_field('title_spisok'); ?>
+                        <div class="service-info-items-block">
+                            <h2><?php echo $titleSpisok;?></h2>
+                            <div class="tripple-btn tripple-btn-small">
+                                <span class="tripple-btn-first"></span>
+                                <span class="tripple-btn-second"></span>
+                                <span class="tripple-btn-third"></span>                           
+                            </div>
+                            <span class="number">0<?php echo $numbb;?></span>
+                        </div>
+
+                    <?php endwhile; 
+                ?>
+
+
+
+
+                
+
+             
 
             </div>
 
@@ -236,95 +216,75 @@ Template Name: service-design
     
                     <!-- swiper slides -->
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="slide-square">
-                                <span>Intericco</span>
+                    
+
+
+                    <?php
+                        while ( have_rows('sostovlyayushhee_dizajn_proekt') ) : the_row(); $numbb++?>
+                            <?php 
+                                $zagolovok = get_sub_field('zagolovok'); 
+                                $podzagolvook = get_sub_field('podzagolvook'); 
+                                $podtekst = get_sub_field('podtekst'); 
+                            ?>
+                            
+
+
+
+
+                            <div class="swiper-slide">
+                                <div class="slide-square">
+                                    <span>Intericco</span>
+                                </div>
+                                <h2><?php echo $zagolovok;?></h2>
+                                <div class="tripple-btn tripple-btn-small">
+                                    <span class="tripple-btn-first"></span>
+                                    <span class="tripple-btn-second"></span>
+                                    <span class="tripple-btn-third"></span>                          
+                                </div>
+                                <span><?php echo $podzagolvook;?></span>
+                                <p> <?php echo $podtekst;?> </p>
+                                <span><strong>Входят:</strong></span>    
+                                <ul>
+                                    <?php
+                                        while ( have_rows('spisok_uslug') ) : the_row();?>
+                                            <?php $nazvanie = get_sub_field('nazvanie'); ?>
+
+                                            <li><?php echo $nazvanie;?></li>
+                                            
+
+                                        <?php endwhile; 
+                                    ?>
+                                </ul>
+                                <div class="tripple-btn tripple-btn-medium">
+                                    <span class="tripple-btn-first"></span>
+                                    <span class="tripple-btn-second"></span>
+                                    <span class="tripple-btn-third"></span>
+                                    <h3 class="tripple-btn-title">Расчитать</h3>
+                                </div>
                             </div>
-                            <h2>ЭСКИЗ-ИДЕЯ</h2>
-                            <div class="tripple-btn tripple-btn-small">
-                                <span class="tripple-btn-first"></span>
-                                <span class="tripple-btn-second"></span>
-                                <span class="tripple-btn-third"></span>                          
-                            </div>
-                            <span><strong>Конкретизация</strong> идеи дизайна</span>
-                            <p>Помогает определить возможности
-                                проекта и получить ожидаемый
-                                результат, минимизировав расходы
-                                и время реализации</p>
-                            <span><strong>Входят:</strong></span>    
-                            <ul>
-                                <li>Эскизы с основной идеей</li>
-                                <li>Подбор аналогов интерьера</li>
-                                <li> Предложения по основной
-                                    мебели и оборудованию</li>
-                                <li>Перечень основных отделочных
-                                    материалов</li>
-                            </ul>
-                            <div class="tripple-btn tripple-btn-medium">
-                                <span class="tripple-btn-first"></span>
-                                <span class="tripple-btn-second"></span>
-                                <span class="tripple-btn-third"></span>
-                                <h3 class="tripple-btn-title">Расчитать</h3>
-                            </div>
-                        </div>
+                            
+
+
+
+                        <?php endwhile; 
+                    ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                         
-                        <div class="swiper-slide"> 
-                            <h2>ЭСКИЗ-ИДЕЯ</h2>
-                            <div class="tripple-btn tripple-btn-small">
-                                <span class="tripple-btn-first"></span>
-                                <span class="tripple-btn-second"></span>
-                                <span class="tripple-btn-third"></span>                          
-                            </div>
-                            <span><strong>Конкретизация</strong> идеи дизайна</span>
-                            <p>Помогает определить возможности
-                                проекта и получить ожидаемый
-                                результат, минимизировав расходы
-                                и время реализации</p>
-                            <span><strong>Входят:</strong></span>    
-                            <ul>
-                                <li>Эскизы с основной идеей</li>
-                                <li>Подбор аналогов интерьера</li>
-                                <li> Предложения по основной
-                                    мебели и оборудованию</li>
-                                <li>Перечень основных отделочных
-                                    материалов</li>
-                            </ul>
-                            <div class="tripple-btn tripple-btn-medium">
-                                <span class="tripple-btn-first"></span>
-                                <span class="tripple-btn-second"></span>
-                                <span class="tripple-btn-third"></span>
-                                <h3 class="tripple-btn-title">Расчитать</h3>
-                            </div>
-                        </div>
                         
-                        <div class="swiper-slide">
-                            <h2>ЭСКИЗ-ИДЕЯ</h2>
-                            <div class="tripple-btn tripple-btn-small">
-                                <span class="tripple-btn-first"></span>
-                                <span class="tripple-btn-second"></span>
-                                <span class="tripple-btn-third"></span>                          
-                            </div>
-                            <span><strong>Конкретизация</strong> идеи дизайна</span>
-                            <p>Помогает определить возможности
-                                проекта и получить ожидаемый
-                                результат, минимизировав расходы
-                                и время реализации</p>
-                            <span><strong>Входят:</strong></span>    
-                            <ul>
-                                <li>Эскизы с основной идеей</li>
-                                <li>Подбор аналогов интерьера</li>
-                                <li> Предложения по основной
-                                    мебели и оборудованию</li>
-                                <li>Перечень основных отделочных
-                                    материалов</li>
-                            </ul>
-                            <div class="tripple-btn tripple-btn-medium">
-                                <span class="tripple-btn-first"></span>
-                                <span class="tripple-btn-second"></span>
-                                <span class="tripple-btn-third"></span>
-                                <h3 class="tripple-btn-title">Расчитать</h3>
-                            </div>
-                        </div>
+                  
                     </div>
 
                     <div class="swiper-pagination">

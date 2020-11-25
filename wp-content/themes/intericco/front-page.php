@@ -401,12 +401,6 @@ Template Name: Front-page
                 <?php endif; 
             ?>
 
-
-
-
-              
-
-
           </div>
           <div class="slider-scrollbar"></div>
           <div class="swiper-pagination">

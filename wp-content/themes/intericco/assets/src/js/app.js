@@ -26,7 +26,23 @@ $(document).ready(function () {
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev"
-        }
+        },
+
+
+
+        breakpoints: {
+          1024: {
+            slidesPerView: 2
+          },
+          767: {
+            slidesPerView: 1
+          },
+          320: {
+            slidesPerView: 1,
+            slidesPerColumn: 3,
+          }
+        },
+
       });
 
  

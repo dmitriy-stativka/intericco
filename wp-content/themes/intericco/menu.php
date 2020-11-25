@@ -105,7 +105,21 @@
                     <div class="menu-list-item-container">
                         <a class="menu-list-item-link" href="<?php echo $link;?>"></a>
                         <div class="link-content">
-                            <a class="link-content-main" href="<?php echo $link;?>"><?php the_title();?></a>                      
+                            <a class="link-content-main" href="<?php echo $link;?>"><?php the_title();?></a>  
+
+                            <ul class="link-content-sub">
+                                <?php
+                                    while ( have_rows('sub_category') ) : the_row(); ?>
+                                        <?php $sub_category_text = get_sub_field('sub_category_text'); 
+                                              $sub_categoty_link = get_sub_field('sub_categoty_link'); ?>
+
+                                        <li class="link-content-sub-item">
+                                            <a href="<?php echo $sub_categoty_link;?>"><?php echo $sub_category_text?></a>
+                                        </li>
+                                    
+                                    <?php endwhile; 
+                                ?>
+                            </ul>
                         </div>
                     </div>
                 </li>
