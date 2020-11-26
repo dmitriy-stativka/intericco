@@ -15,9 +15,9 @@ get_header(); ?>
   <?php include("menu.php") ?> 
     <div class="design-container">
         <div class="top-crumbs">
-            <a class="crumbs-item" href="/dizajn">Дизайн</a>
+            <a class="crumbs-item" href="/dizajn"><?php pll_e('designtitle');?></a>
             <div class="crumbs-last">
-               <span>Архитектура</span>
+               <span><?php pll_e('architekttitle');?></span>
                 <span class="line line-purple"></span>
                 <span class="line line-corner"></span>
                 <span class="line line-blue"></span>  

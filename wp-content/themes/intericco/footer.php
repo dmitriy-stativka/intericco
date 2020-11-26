@@ -31,6 +31,20 @@
 						<div class="tripple-lines-long"></div>
 						<div class="tripple-lines-two"></div>
 					</div>
+
+
+
+					<?php
+						if(pll_current_language() == 'ru'){
+							echo do_shortcode( '[cf7form cf7key="kontaktnaya-forma-1"]' );
+					
+						}elseif(pll_current_language() == 'en'){
+							echo do_shortcode( '[cf7form cf7key="bez-nazvaniya"]' );
+						}
+					?>
+
+
+
 				</div>
 				<div class="footer-top-right-text">
 					<span>Interrico</span>

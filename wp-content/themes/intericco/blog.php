@@ -69,7 +69,7 @@ Template Name: blog
                                     <span class="tripple-btn-first"></span>
                                     <span class="tripple-btn-second"></span>
                                     <span class="tripple-btn-third"></span>
-                                    <h3 class="tripple-btn-title">Смотреть новость</h3>
+                                    <h3 class="tripple-btn-title"><?php pll_e('viewnew'); ?></h3>
                                 </div>
                                 <span class="blog-item-bottom-date"><?php echo get_the_date('d.m.Y'); ?></span>
                             </div>                      
@@ -92,14 +92,14 @@ Template Name: blog
 
     <a href="#" class="consultation">
         <div class="consultation-text">
-            <h3>Хочешь видеть свой проект?</h3>
-            <p>Заполни форму - мы свяжемся с тобой</p>
+            <h3><?php pll_e('blogtitle');?></h3>
+            <p><?php pll_e('blogtext');?></p>
         </div>
         <div class="tripple-btn tripple-btn-bigger">
             <span class="tripple-btn-first"></span>
             <span class="tripple-btn-second"></span>
             <span class="tripple-btn-third"></span>
-            <h3 class="tripple-btn-title">Консультация</h3>
+            <h3 class="tripple-btn-title"><?php pll_e('consultation');?></h3>
         </div>
     </a>
 
@@ -108,20 +108,18 @@ Template Name: blog
         <div class="design-icon"><img src="/wp-content/themes/intericco/images/small-design-icon.svg" alt=""></div>
 
         <div class="lines-title-wrapper">
-          <h1 class="lines-title info-middle-top-title">Какой-то SEO текст</h1>
+          <h1 class="lines-title info-middle-top-title"><?php pll_e('blogtitleseo');?></h1>
           <span class="line line-purple line-purple-mob"></span>
           <span class="line line-corner line-corner-mob"></span>
           <span class="line line-blue line-blue-mob"></span>             
         </div>  
 
         <div class="design-seo-middle">
-          <h4>Какой-то SEO заголовок</h4>
-          <p>Жизнь любого нашего проекта, будь то дизайн интерьера или архитектура, начинается задолго до первой линии эскиза
-            задолго до первой линии эскиза задолго до первой линии эскиза. Начало заложено в жизненном опыте заказчика и в
-            его понимании своих желаний. В его естественных, сложившехся за годы привычках и мироощущении. Начало
-            вшито в наши компетенции и врожденную скрупулезность в деталях. Начало заложено в жизненном опыте заказчика и
-            в его понимании своих желаний. В его естественных, сложившехся за годы привычках и мироощущении. Начало
-            вшито в наши компетенции и врожденную скрупулезность в деталях</p>
+            <?php
+                wp_reset_postdata();
+                global $post;
+                the_content();
+            ?>
         </div>
 
       </div>

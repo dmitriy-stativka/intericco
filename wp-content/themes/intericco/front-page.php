@@ -32,7 +32,7 @@ Template Name: Front-page
     <div class="left-side middle-portfolio-left">
       <div class="left-side-title middle-portfolio-left-title">
         <div class="left-side-title-wrapper portfolio-left-title-wrapper">
-          <h2 class="left-side-title-tag portfolio-left-title-tag">Портфолио</h2>
+          <h2 class="left-side-title-tag portfolio-left-title-tag"><?php pll_e('portfolio'); ?></h2>
           <span class="line line-purple line-purple-mob"></span>
           <span class="line line-corner line-corner-mob"></span>
           <span class="line line-blue line-blue-mob"></span>        
@@ -40,10 +40,10 @@ Template Name: Front-page
         <div class="portfolio-left-title-red_line">
           <span></span>
         </div>
-        <a class="portfolio-left-scroll" href="#">ВНИЗ</a>
+        <a class="portfolio-left-scroll"><?php pll_e('down'); ?></a>
       </div>
       <div class="left-side-text middle-portfolio-left-text">
-        <span>WORK</span>
+        <span><?php pll_e('work'); ?></span>
       </div>
     </div>
     <div class="middle-portfolio-slider">
@@ -54,17 +54,17 @@ Template Name: Front-page
             <span class="tripple-btn-first"></span>
             <span class="tripple-btn-second"></span>
             <span class="tripple-btn-third"></span>
-            <h3 class="tripple-btn-title">ДИЗАЙН</h3>
+            <h3 class="tripple-btn-title"><?php pll_e('designtitle'); ?></h3>
           </a>
           <span class="slash">\</span>
-          <h3 class="category">АРХИТЕКТУРА</h3>
+          <h3 class="category"><?php pll_e('architekttitle');?></h3>
         </div>
 
         <a class="tripple-btn tripple-btn-big" href="#">
           <span class="tripple-btn-first"></span>
           <span class="tripple-btn-second"></span>
           <span class="tripple-btn-third"></span>
-          <h3 class="tripple-btn-title tripple-btn-title-arrow">Все проекты</h3>
+          <h3 class="tripple-btn-title tripple-btn-title-arrow"><?php pll_e('allprojects');?></h3>
         </a>
 
       </div>
@@ -104,12 +104,6 @@ Template Name: Front-page
                       <?php endwhile; ?>
                   <?php endif; 
                 ?>
-
-
-
-               
-
-
           </div>
           <div class="swiper-pagination">
             <span>1</span>
@@ -149,7 +143,7 @@ Template Name: Front-page
     <div class="left-side left-side-sm left-side-info">
       <div class="left-side-title left-side-sm-title">
         <div class="left-side-title-wrapper left-side-sm-title-wrapper">
-          <h2 class="left-side-title-tag left-side-sm-title-tag">О НАС</h2>       
+          <h2 class="left-side-title-tag left-side-sm-title-tag"><?php pll_e('aboutus');?></h2>       
         </div>
       </div>
       <div class="left-side-text left-side-sm-text">
@@ -163,7 +157,7 @@ Template Name: Front-page
 
           <div class="lines-title-wrapper">
             <!-- <h2 class="left-side-title-tag">Инфографика</h2> -->
-            <h1 class="lines-title info-middle-top-title">Инфографика</h1>
+            <h1 class="lines-title info-middle-top-title"><?php pll_e('infographics');?></h1>
             <span class="line line-purple line-purple-mob"></span>
             <span class="line line-corner line-corner-mob"></span>
             <span class="line line-blue line-blue-mob"></span>             
@@ -173,50 +167,50 @@ Template Name: Front-page
         <div class="info-middle-main-numbers">
 
           <div class="main-numbers-block">
-            <span class="number">500</span>
+            <span class="number"><?php pll_e('numbfirst');?></span>
             <div class="tripple-btn tripple-btn-tiny">
               <span class="tripple-btn-first"></span>
               <span class="tripple-btn-second"></span>
               <span class="tripple-btn-third"></span>         
             </div>
-            <span class="main-numbers-block-category">Проектов</span>
-            <span class="main-numbers-block-bottom-text">Сделано</span>
+            <span class="main-numbers-block-category"><?php pll_e('projectstext');?></span>
+            <span class="main-numbers-block-bottom-text"><?php pll_e('done');?></span>
           </div>
 
           <div class="main-numbers-block">
-            <span class="number">500</span>
+            <span class="number"><?php pll_e('numbsec');?></span>
             <div class="tripple-btn tripple-btn-tiny">
               <span class="tripple-btn-first"></span>
               <span class="tripple-btn-second"></span>
               <span class="tripple-btn-third"></span>         
             </div>
-            <span class="main-numbers-block-category">Проектов</span>
-            <span class="main-numbers-block-bottom-text">Сделано</span>
+            <span class="main-numbers-block-category"><?php pll_e('projectstextsec');?></span>
+            <span class="main-numbers-block-bottom-text"><?php pll_e('donesec');?></span>
           </div>
 
           <div class="main-numbers-block">
-            <span class="number">500</span>
+            <span class="number"><?php pll_e('numbthird');?></span>
             <div class="tripple-btn tripple-btn-tiny">
               <span class="tripple-btn-first"></span>
               <span class="tripple-btn-second"></span>
               <span class="tripple-btn-third"></span>         
             </div>
-            <span class="main-numbers-block-category">Проектов</span>
-            <span class="main-numbers-block-bottom-text">Сделано</span>
+            <span class="main-numbers-block-category"><?php pll_e('projectstextthird');?></span>
+            <span class="main-numbers-block-bottom-text"><?php pll_e('donethird');?></span>
           </div>
 
         </div>
         <div class="info-middle-main-rating">
-            <h3 class="info-middle-main-rating-title"><strong>Мы - лучшие</strong> в своём деле.</h3>
+            <h3 class="info-middle-main-rating-title"><?php pll_e('webest');?></h3>
             <div class="info-middle-main-rating-stars">
               <span class="star-icon star-icon-active"><svg class="icon"><use xlink:href="#star"></svg></span>
               <span class="star-icon star-icon-active"><svg class="icon"><use xlink:href="#star"></svg></span>
-              <span class="star-icon"><svg class="icon"><use xlink:href="#star"></svg></span>
-              <span class="star-icon"><svg class="icon"><use xlink:href="#star"></svg></span>
-              <span class="star-icon"><svg class="icon"><use xlink:href="#star"></svg></span>
+              <span class="star-icon star-icon-active"><svg class="icon"><use xlink:href="#star"></svg></span>
+              <span class="star-icon star-icon-active"><svg class="icon"><use xlink:href="#star"></svg></span>
+              <span class="star-icon star-icon-active"><svg class="icon"><use xlink:href="#star"></svg></span>
             </div>
-            <span class="info-middle-main-rating-text"><strong>Именно</strong> поэтому нам доверяют многие</span>
-            <a class="main-link" href="#">Доверить нам проект</a>
+            <span class="info-middle-main-rating-text"><?php pll_e('generaltext');?> </span>
+            <a class="main-link" href="#"><?php pll_e('callus');?> </a>
         </div>
       </div>
 
@@ -246,7 +240,7 @@ Template Name: Front-page
 
           <div class="title-block">
             <div class="lines-title-wrapper">
-              <h2 class="lines-title info-middle-top-title">Наши услуги</h2>
+              <h2 class="lines-title info-middle-top-title"><?php pll_e('ourservices');?></h2>
               <span class="line line-purple line-purple-mob"></span>
               <span class="line line-corner line-corner-mob"></span>
               <span class="line line-blue line-blue-mob"></span>             
@@ -306,7 +300,7 @@ Template Name: Front-page
                               <span class="tripple-btn-first"></span>
                               <span class="tripple-btn-second"></span>
                               <span class="tripple-btn-third"></span>
-                              <h3 class="tripple-btn-title">Подробнее</h3>
+                              <h3 class="tripple-btn-title"><?php pll_e('moredetails');?></h3>
                             </span>
                           </div>
                         </a>
@@ -338,7 +332,7 @@ Template Name: Front-page
     <div class="left-side left-side-sm">
       <div class="left-side-title left-side-sm-title">
         <div class="left-side-title-wrapper left-side-sm-title-wrapper">
-          <h2 class="left-side-title-tag left-side-sm-title-tag">НАШИ НОВОСТИ</h2>       
+          <h2 class="left-side-title-tag left-side-sm-title-tag"><?php pll_e('ournews');?></h2>       
         </div>
       </div>
       <div class="left-side-text left-side-sm-text">
@@ -357,14 +351,14 @@ Template Name: Front-page
             <span class="line line-blue"></span>  
           </div>    
           <div class="lines-title-wrapper">
-              <h2 class="lines-title info-middle-top-title">Новости</h2>
+              <h2 class="lines-title info-middle-top-title"><?php pll_e('newstitle');?></h2>
               <span class="line line-purple line-purple-mob"></span>
               <span class="line line-corner line-corner-mob"></span>
               <span class="line line-blue line-blue-mob"></span>             
             </div>     
         </div>
 
-        <a class="news-middle-top-link" href="/blog">НАШИ НОВОСТИ</a>
+        <a class="news-middle-top-link" href="/blog"><?php pll_e('ournews');?></a>
 
       </div>
 
@@ -394,7 +388,7 @@ Template Name: Front-page
                           <span class="tripple-btn-first"></span>
                           <span class="tripple-btn-second"></span>
                           <span class="tripple-btn-third"></span>
-                          <h3 class="tripple-btn-title">Читать дальше</h3>
+                          <h3 class="tripple-btn-title"><?php pll_e('readmoretitle');?></h3>
                         </a>
                       </div>
                         <?php endwhile; ?>

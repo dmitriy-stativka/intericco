@@ -287,3 +287,45 @@ add_action('init', 'register_post_types');
 }
 
 
+
+
+pll_register_string('Смотреть новость', 'viewnew');
+pll_register_string('Портфолио', 'portfolio');
+pll_register_string('Вниз', 'down');
+pll_register_string('work', 'work');
+pll_register_string('Дизайн', 'designtitle');
+pll_register_string('Архитектура', 'architekttitle');
+pll_register_string('Все проекты', 'allprojects');
+pll_register_string('О нас', 'aboutus');
+pll_register_string('Инфографика', 'infographics');
+
+
+pll_register_string('Первая цифра', 'numbfirst');
+pll_register_string('Проектов', 'projectstext');
+pll_register_string('Сделано', 'done');
+
+pll_register_string('Первая цифра', 'numbsec');
+pll_register_string('Проектов', 'projectstextsec');
+pll_register_string('Сделано', 'donesec');
+
+pll_register_string('Первая цифра', 'numbthird');
+pll_register_string('Проектов', 'projectstextthird');
+pll_register_string('Сделано', 'donethird');
+
+pll_register_string('Мы - лучшие в своём деле.', 'webest');
+
+pll_register_string('Именно поэтому нам доверяют многие', 'generaltext');
+pll_register_string('Доверить нам проект', 'callus');
+pll_register_string('Наши услуги', 'ourservices');
+pll_register_string('Подробнее', 'moredetails');
+pll_register_string('НАШИ НОВОСТИ', 'ournews');
+pll_register_string('НОВОСТИ', 'newstitle');
+pll_register_string('Читать дальше', 'readmoretitle');
+
+
+pll_register_string('Хочешь видеть свой проект?', 'blogtitle');
+pll_register_string('Заполни форму - мы свяжемся с тобой', 'blogtext');
+pll_register_string('Консультация', 'consultation');
+
+pll_register_string('Блог заголовок h1', 'blogtitleseo');
+
