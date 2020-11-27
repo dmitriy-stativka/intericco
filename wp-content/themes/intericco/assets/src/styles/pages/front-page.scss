@@ -8,6 +8,15 @@
   z-index: 9;
   padding-bottom: 75px;
 
+  .new{
+    opacity: 0;
+  }
+
+  .div_opacity{
+    opacity: 1;
+    transition: opacity .1s ease-in-out;
+  }
+
   &-middle{
     display: flex;
     flex-direction: column;

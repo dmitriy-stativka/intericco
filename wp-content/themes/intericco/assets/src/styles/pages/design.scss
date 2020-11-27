@@ -2,14 +2,18 @@
 .page-template-architecture{
     
     .header{
-        display: none;
+        display: block;
+
+        @media(min-width: $desktop) {
+          display: none;
+        }
     }
 
     .design-wrapper{
         display: flex;
         justify-content: center;
         position: relative;
-        padding: 0px 150px;
+        padding: 0px 10px;
 
         .menu-left{
           height: 100%;
@@ -27,6 +31,127 @@
             height: 100%;
             padding-top: 100px;
             padding-bottom: 100px;
+
+            .lines-title-wrapper{
+              position: relative;
+              padding-top: 74px;
+              max-width: 90%;
+              width: 100%;
+              align-self: center;
+              margin: 20px 0;
+            
+                .lines-title{
+                  position: relative;
+                  width: fit-content;
+                  background-color: white;
+              
+                  &:before{
+                    content: "";
+                    display: block;
+                    border: 4px solid #E8E8E8;
+                    height: 100px;
+                    width: 100px;
+                    position: absolute;
+                    right: -35px;
+                    bottom: -29px;
+                    z-index: -1;
+              
+                    @media(min-width: $desktop) {
+                      display: block;
+                    }
+                  }
+              
+                  &:after{
+                    content: none;            
+                  }
+              
+                }
+              
+                .line-purple-mob{
+                  left: 63px;
+                  
+                  @media(min-width: $desktop) {
+                    display: block;
+                  }
+                }
+              
+                .line-corner-mob{
+                  left: 44px;
+              
+                  @media(min-width: $desktop) {
+                    display: block;
+                  }
+                }
+              
+                .line-blue-mob{
+                  left: -7px;
+              
+                  @media(min-width: $desktop) {
+                    display: block;
+                  }
+                }
+              
+                @media(min-width: $desktop) {
+                  padding-top: 74px;
+                }
+        
+                &:before{
+                  content: "";
+                  display: block;
+                  width: 50px;
+                  height: 4px;
+                  background-color: #E05D68;
+                  position: absolute;
+                  left: -100px;
+                  bottom: 15px;
+                }
+        
+                &:after{
+                  content: "";
+                  display: block;
+                  width: 50px;
+                  height: 4px;
+                  background-color: #E05D68;
+                  position: absolute;
+                  right: 0px;
+                  bottom: 15px;
+                }
+
+                @media(min-width: $desktop) {
+                  display: none;
+                }
+              }
+
+            .top-crumbs{
+              font-size: 20px;
+              justify-content: center;
+              margin-top: 60px;
+
+              .crumbs-last{
+
+                .line{
+                  display: none;
+
+                  @media(min-width: $desktop) {
+                    display: block;
+                  }
+                }
+              }
+
+              &:before{   
+                display: none;             
+
+                @media(min-width: $desktop) {
+                  display: block;
+                }
+              }
+
+              @media(min-width: $desktop) {
+                font-size: 35px;
+                justify-content: initial;
+                margin-top: 0;
+              }
+            }
 
             .design-tabs > input,
             .design-tabs .tabs-content-container > .tabs-block {
@@ -66,10 +191,10 @@
             }
 
             .design-tabs{
-              margin-top: 100px;
+              margin-top: 25px;
 
               .design-tabs-labels{
-                display: flex;
+                display: none;
                 justify-content: space-between;
                 border: 1px solid #E1E1E1;
                 margin-bottom: 75px;
@@ -111,40 +236,57 @@
                     }
                   }
                 }
+
+                @media(min-width: $desktop) {
+                  display: flex;
+                }
               }
 
               .tabs-content-container{
+                display: flex;
+                flex-direction: column;
                 position: relative;
+                padding: 0 15px;
 
                   .line{
       
                     &-purple{
                       width: 150px;
                       height: 3px;
-                      left: 51px;
-                      top: -25px;
+                      left: 72px;
+                      top: -20px;
 
                       @media(min-width: $desktop) {
                         width: 230px;
+                        left: 51px;
+                        top: -25px;
                       }
                     }
           
                     &-corner{
                       width: 75px;
                       height: 140px;
-                      border-width: 3px 0px 0px 3px;
-                      top: -24px;
-                      left: -24px;
+                      border-width: 3px 0px 0px 3px;                 
+                      top: -19px;
+                      left: -2px;
+
+                      @media(min-width: $desktop) {
+                        top: -24px;
+                        left: -24px;
+                      }
                     }
           
                     &-blue{
                       height: 150px;
-                      width: 3px;
-                      top: 115px;
-                      left: -22px;
+                      width: 3px;      
+                      top: 120px;
+                      left: -3px;
+
 
                       @media(min-width: $desktop) {
                           height: 250px;
+                          top: 115px;
+                          left: -22px;
                       }
                     }
                 }
@@ -154,8 +296,13 @@
                   max-height: 285px;
                   position: absolute;
                   bottom: -100px;
-                  right: -75px;
+                  left: -100px;
                   z-index: -1;
+
+                  @media(min-width: $desktop) {
+                    right: -75px;
+                    left: initial;
+                  }
                 }
 
                 .tabs-block{
@@ -167,7 +314,7 @@
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-end;
-                    max-width: 32%;
+                    max-width: 100%;
                     max-height: 420px;
                     min-height: 420px;
                     width: 100%;
@@ -228,10 +375,38 @@
                         transition: background-color 0.3s ease;
                       }
                     }
+
+                    @media(min-width: $desktop) {
+                      max-width: 32%;
+                    }
                   }
+                }
+
+                @media(min-width: $desktop) {
+                  flex-direction: row;
+                  padding: 0;
+                }
+              }
+
+              @media(min-width: $desktop) {
+                margin-top: 100px;
+              }
+            }
+
+            .design-seo{
+
+              .design-icon{
+                display: none;
+
+                @media(min-width: $desktop) {
+                  display: block;
                 }
               }
             }
+        }
+
+        @media(min-width: $desktop) {
+          padding: 0 150px;
         }
     }
 }

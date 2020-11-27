@@ -137,7 +137,7 @@
 
 
     </div>
-    <div class="menu-left-top">
+    <div class="menu-left-top wow animate__fadeInLeft" data-wow-duration="1s">
         <div class="menu-left-top-burger">
             <button class="menu-left-top-burger-btn">
                 <span></span>
@@ -147,7 +147,7 @@
             <span class="menu-left-top-name-text">menu</span>
         </div>
     </div>   
-    <div class="menu-left-bottom">
+    <div class="menu-left-bottom wow animate__fadeInLeft" data-wow-duration="1.5s">
         <svg class="icon"><use xlink:href="#arrow-down"></svg>
     </div>  
     <div class="info-right">

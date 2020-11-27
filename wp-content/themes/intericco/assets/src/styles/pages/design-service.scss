@@ -18,6 +18,7 @@
 }
 
 .top-site-service-design{
+  justify-content: center;
 
     .swiper-bg{
         width: 100vw;
@@ -51,7 +52,7 @@
 
         
       .swiper-pagination{
-        display: flex;
+        display: none;
         justify-content: center;
         height: 30px;
         width: initial;
@@ -83,36 +84,64 @@
         }
 
         @media(min-width: $desktop) {
+          display: flex;
           justify-content: initial;
         }
       }  
     }
 
     .top-crumbs{
+      display: none;
       z-index: 12;
+
+      @media(min-width: $desktop) {
+        display: flex;
+      }
     }
 
     .top-site-middle{
+        justify-content: center;
         position: relative;
         z-index: 12;
 
-        .top-site-middle-title{
-            padding-left: 65px;
+        .top-site-middle-title{           
+
+            @media(min-width: $desktop) {
+              padding-left: 65px;
+            }
         }
 
         .design-icon{
+            display: none;
             position: absolute;    
             top: -65px;
+
+            @media(min-width: $desktop) {
+              display: block;
+            }
+        }
+
+        @media(min-width: $desktop) {
+          justify-content: space-between;
         }
     }
 
     .text-with-logo{
+        display: none;
         bottom: 15%;
         top: initial;
+
+        @media(min-width: $desktop) {
+          display: block;
+        }
     }
 
     &:before{
       z-index: 12;
+    }
+
+    @media(min-width: $desktop) {
+      justify-content: space-between;
     }
 }
 
