@@ -20,6 +20,7 @@ section and everything up until
         rel="stylesheet"
       />
       <link rel="profile" href="https://gmpg.org/xfn/11" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>	
       <link
         rel="stylesheet"
         href="/wp-content/themes/intericco/styles/styles.min.css"
@@ -31,7 +32,7 @@ section and everything up until
       <?php wp_body_open(); ?>
 
       <div class="wrapper">
-        <header class="header">
+        <header class="header wow animate__fadeInDown" data-wow-duration="1.5s">
           <div class="header-left-block">       
             <ul class="header-lang">
               <?php pll_the_languages();?>

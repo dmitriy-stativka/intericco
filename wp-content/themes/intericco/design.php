@@ -14,6 +14,12 @@ get_header(); ?>
   <div class="middle-line middle-line-fifth"></div>
   <?php include("menu.php") ?> 
     <div class="design-container">
+        <div class="lines-title-wrapper">
+          <h1 class="lines-title info-middle-top-title">Портфолио</h1>
+          <span class="line line-purple line-purple-mob"></span>
+          <span class="line line-corner line-corner-mob"></span>
+          <span class="line line-blue line-blue-mob"></span>             
+        </div>  
         <div class="top-crumbs">
             <a class="crumbs-item" href="#">Архитектура</a>
             <div class="crumbs-last">

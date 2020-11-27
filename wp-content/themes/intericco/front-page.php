@@ -9,15 +9,17 @@ Template Name: Front-page
 
 <section style="background: url(/wp-content/themes/intericco/images/front-page-bg.jpg) no-repeat top center; background-size: cover;" class="top-site">   
   <div class="top-site-middle">
-    <h1 class="top-site-middle-title">
-      <?php the_field('general_title');?>
-    </h1>
-    <div class="top-site-middle-bottom">
+
+    <div class="top-site-text">
+      <h1 class="top-site-middle-title"><span><?php the_field('general_title');?></span></h1>
+    </div>
+
+    <div class="top-site-middle-bottom wow animate__fadeInUp" data-wow-duration="2s">
       <a href="#" class="main-link top-site-middle-bottom-link"><?php the_field('general_btn');?></a>
       <p><?php the_field('prizyv');?></p>
     </div>
   </div>
-  <div class="long-line"></div>
+  <div class="long-line wow animate__fadeInRightBig" data-wow-duration="2s"></div>
 </section>
 
 <section class="middle-wrapper">
@@ -29,7 +31,7 @@ Template Name: Front-page
   <div class="middle-line middle-line-fifth"></div>
 
   <div class="middle-portfolio">
-    <div class="left-side middle-portfolio-left">
+    <div class="left-side middle-portfolio-left wow animate__fadeInLeft" data-wow-duration="2s">
       <div class="left-side-title middle-portfolio-left-title">
         <div class="left-side-title-wrapper portfolio-left-title-wrapper">
           <h2 class="left-side-title-tag portfolio-left-title-tag"><?php pll_e('portfolio'); ?></h2>
@@ -46,7 +48,7 @@ Template Name: Front-page
         <span><?php pll_e('work'); ?></span>
       </div>
     </div>
-    <div class="middle-portfolio-slider">
+    <div class="middle-portfolio-slider wow animate__fadeInRight" data-wow-duration="2s">
       <div class="middle-portfolio-slider-top">
 
         <div class="middle-portfolio-slider-top-left">
@@ -140,7 +142,7 @@ Template Name: Front-page
 
     </div>
 
-    <div class="left-side left-side-sm left-side-info">
+    <div class="left-side left-side-sm left-side-info wow animate__fadeInLeft" data-wow-duration="2s">
       <div class="left-side-title left-side-sm-title">
         <div class="left-side-title-wrapper left-side-sm-title-wrapper">
           <h2 class="left-side-title-tag left-side-sm-title-tag"><?php pll_e('aboutus');?></h2>       

@@ -1066,13 +1066,24 @@ input {
           font-weight: normal;
           font-size: 18px;
           color: #232222;
+          max-width: 90%;
+          margin-bottom: 50px;
+
+          @media(min-width: $desktop) {
+            max-width: initial;
+            margin-bottom: 10px;
+          }
       }
   }
 
   .tripple-btn{
       align-self: flex-end;
       margin-right: 70px;
-
+      position: absolute;
+      bottom: 15px;
+      left: -25px;
+      right: 0;
+      margin: auto;
       .tripple-btn-title{                                       
           font-size: 14px;
           text-transform: initial;
@@ -1090,6 +1101,14 @@ input {
           background-color: #E05D68;
           position: absolute;
           right: -70px;
+      }
+
+      @media(min-width: $desktop) {
+        position: relative;
+        right: initial;
+        left: initial;
+        bottom: initial;
+        margin: 0 70px 0 0;
       }
   }
 
