@@ -15,7 +15,7 @@ get_header(); ?>
     <div class="contacts-container">
         <div class="top-crumbs">       
             <div class="crumbs-last">
-               <span>Контакты</span>
+               <span><?php the_title();?></span>
                 <span class="line line-purple"></span>
                 <span class="line line-corner"></span>
                 <span class="line line-blue"></span>  
@@ -29,31 +29,28 @@ get_header(); ?>
         <div class="contacts-middle">
 
             <div class="contacts-middle-left">
-                <h2 class="contacts-title">Наши контакты:</h2>
+                <h2 class="contacts-title"><?php pll_e('ourcontacts');?></h2>
 
                 <div class="footer-bottom-right">
                     
                     <div class="footer-right-info-item">
                         <img src="/wp-content/themes/intericco/images/location-black.svg">
                         <div class="footer-right-info-item-place">
-                            <span class="city">г. Харьков</span>
-                            <span class="place">пр-т Московский 261</span>
+                            <span class="city">г. Харьков пр-т Московский 261</span>
                         </div>
                     </div>
 
                     <div class="footer-right-info-item">
                         <img src="/wp-content/themes/intericco/images/watch-black.svg">
                         <div class="footer-right-info-item-place">
-                            <span class="city">г. Харьков</span>
-                            <span class="place">пр-т Московский 261</span>
+                            <span class="city">г. Харьков пр-т Московский 261</span>
                         </div>
                     </div>
 
                     <div class="footer-right-info-item">
                         <img src="/wp-content/themes/intericco/images/watch-black.svg">
                         <div class="footer-right-info-item-place">
-                            <span class="city">г. Харьков</span>
-                            <span class="place">пр-т Московский 261</span>
+                            <span class="city">г. Харьков пр-т Московский 261</span>
                         </div>
                     </div>
         

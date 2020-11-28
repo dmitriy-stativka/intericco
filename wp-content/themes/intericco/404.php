@@ -24,7 +24,7 @@ get_header();
         <div class="error-right-text">
             <span>Intericco</span>
         </div>
-        <h1 class="error-title">УУУУПС... КАКОЕ-ТО НЕДОРАЗУМЕНИЕ
+        <h1 class="error-title"><?php pll_e('errortext');?>
             <span class="line line-purple"></span>
             <span class="line line-corner"></span>
             <span class="line line-blue"></span> 
@@ -36,16 +36,16 @@ get_header();
         </div>
         <div class="error-bottom">
             <div class="error-bottom-title">
-                <h1 class="error-title">Посетите так же</h1>    
+                <h1 class="error-title"><?php pll_e('errorewording');?></h1>    
             </div>
 
             <ul class="footer-bottom-left-menu">
-                <li class="footer-menu-item"><a href="#">Главная</a></li>
-                <li class="footer-menu-item"><a href="#">Портфолио</a></li>
-                <li class="footer-menu-item"><a href="#">Блог</a></li>
-                <li class="footer-menu-item"><a href="#">Дизайн</a></li>
-                <li class="footer-menu-item"><a href="#">Архитектура</a></li>
-                <li class="footer-menu-item"><a href="#">Контакты</a></li>
+                <li class="footer-menu-item"><a href="/">Главная</a></li>
+                <li class="footer-menu-item"><a href="/portfolio">Портфолио</a></li>
+                <li class="footer-menu-item"><a href="/blog">Блог</a></li>
+                <li class="footer-menu-item"><a href="/dizajn">Дизайн</a></li>
+                <li class="footer-menu-item"><a href="/arhitekruta">Архитектура</a></li>
+                <li class="footer-menu-item"><a href="/kontakty">Контакты</a></li>
             </ul>        
         </div>
     </div>
