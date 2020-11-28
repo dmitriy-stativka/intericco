@@ -309,6 +309,8 @@
                   display: flex;
                   justify-content: space-between;
                   flex-wrap: wrap;
+                  max-width: 100%;
+                  width: 100%;
 
                   .tabs-block-item{
                     display: flex;
@@ -383,7 +385,7 @@
                 }
 
                 @media(min-width: $desktop) {
-                  flex-direction: row;
+                  display: initial;       
                   padding: 0;
                 }
               }
