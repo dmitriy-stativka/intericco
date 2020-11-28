@@ -329,3 +329,11 @@ pll_register_string('Консультация', 'consultation');
 
 pll_register_string('Блог заголовок h1', 'blogtitleseo');
 
+
+
+pll_register_string('УУУУПС... КАКОЕ-ТО НЕДОРАЗУМЕНИЕ', 'errortext');
+pll_register_string('Посетите так же', 'errorewording');
+pll_register_string('Наши контакты:', 'ourcontacts');
+pll_register_string('Где мы?', 'wherewe');
+
+

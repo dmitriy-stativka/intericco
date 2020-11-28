@@ -8,14 +8,20 @@
  *
  * @package cp
  */
+
+ 
+
 ?>
+
+
+
 
 <?php wp_reset_query(); ?>
 	<footer class="footer">
 		<div class="footer-top" style="background: url(/wp-content/themes/intericco/images/footer-bg.jpg); background-size: cover;">
 			<div class="footer-container">
 				<div class="footer-map">
-					<h1 class="footer-title">Где мы?</h1>
+					<h1 class="footer-title"><?php pll_e('wherewe');?></h1>
 					<div class="map-container">
 						<span class="line line-purple"></span>
 						<span class="line line-corner"></span>
@@ -36,9 +42,11 @@
 
 					<?php
 						if(pll_current_language() == 'ru'){
+							$contacts = 42;
 							echo do_shortcode( '[cf7form cf7key="kontaktnaya-forma-1"]' );
 					
 						}elseif(pll_current_language() == 'en'){
+							$contacts = 178;
 							echo do_shortcode( '[cf7form cf7key="bez-nazvaniya"]' );
 						}
 					?>
@@ -59,48 +67,52 @@
 						<span>ПО САЙТУ</span>
 					</div>
 					<ul class="footer-bottom-left-menu">
-						<li class="footer-menu-item"><a href="#">Главная</a></li>
-						<li class="footer-menu-item"><a href="#">Портфолио</a></li>
-						<li class="footer-menu-item"><a href="#">Блог</a></li>
-						<li class="footer-menu-item"><a href="#">Дизайн</a></li>
-						<li class="footer-menu-item"><a href="#">Архитектура</a></li>
-						<li class="footer-menu-item"><a href="#">Контакты</a></li>
+						<li class="footer-menu-item"><a href="/">Главная</a></li>
+						<li class="footer-menu-item"><a href="/portfolio">Портфолио</a></li>
+						<li class="footer-menu-item"><a href="/blog">Блог</a></li>
+						<li class="footer-menu-item"><a href="/dizajn">Дизайн</a></li>
+						<li class="footer-menu-item"><a href="/arhitekruta">Архитектура</a></li>
+						<li class="footer-menu-item"><a href="/kontakty">Контакты</a></li>
 					</ul>
 
 					<div class="footer-social">
 						<div class="social">
-							<a class="social-icon" href="#"><svg class="icon"><use xlink:href="#inst"></svg></a>
-							<a class="social-icon" href="#"><svg class="icon"><use xlink:href="#twitter"></svg></a>
-							<a class="social-icon" href="#"><svg class="icon"><use xlink:href="#facebook"></svg></a>                
+							<a class="social-icon" href="<?php the_field('insta');?>"><svg class="icon"><use xlink:href="#inst"></svg></a>
+							<a class="social-icon" href="<?php the_field('twitter');?>"><svg class="icon"><use xlink:href="#twitter"></svg></a>
+							<a class="social-icon" href="<?php the_field('facebook');?>"><svg class="icon"><use xlink:href="#facebook"></svg></a>                
 						</div>
 					</div>
 				</div>
 				<div class="footer-bottom-right">
+
 				
-					<div class="footer-right-info-item">
-						<img src="/wp-content/themes/intericco/images/location.svg">
-						<div class="footer-right-info-item-place">
-							<span class="city">г. Харьков</span>
-							<span class="place">пр-т Московский 261</span>
+				
+					<?php if(get_field('adres_1', $contacts)){?>
+						<div class="footer-right-info-item">
+							<img src="/wp-content/themes/intericco/images/location.svg">
+							<div class="footer-right-info-item-place">
+								<span class="city"><?php the_field('adres_1', $contacts);?></span>
+							</div>
 						</div>
-					</div>
+					<?php }?>
 
-					<div class="footer-right-info-item">
-						<img src="/wp-content/themes/intericco/images/time.svg">
-						<div class="footer-right-info-item-place">
-							<span class="city">г. Харьков</span>
-							<span class="place">пр-т Московский 261</span>
+					<?php if(get_field('adres_2', $contacts)){?>
+						<div class="footer-right-info-item">
+							<img src="/wp-content/themes/intericco/images/time.svg">
+							<div class="footer-right-info-item-place">
+								<span class="city"><?php the_field('adres_2', $contacts);?></span>
+							</div>
 						</div>
-					</div>
+					<?php }?>
 
-					<div class="footer-right-info-item">
-						<img src="/wp-content/themes/intericco/images/time.svg">
-						<div class="footer-right-info-item-place">
-							<span class="city">г. Харьков</span>
-							<span class="place">пр-т Московский 261</span>
+					<?php if(get_field('adres_3', $contacts)){?>
+						<div class="footer-right-info-item">
+							<img src="/wp-content/themes/intericco/images/time.svg">
+							<div class="footer-right-info-item-place">
+							<span class="city"><?php the_field('adres_3', $contacts);?></span>
+							</div>
 						</div>
-					</div>
-			
+					<?php }?>
 				</div>
 			</div>
 			<div class="footer-anchor">

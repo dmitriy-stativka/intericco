@@ -98,10 +98,10 @@ Template Name: Front-page
                       <?php while ($query->have_posts()): $query->the_post() ?>
                         <?php $miniImg = get_field('miniatyura');  ?>
 
-                          <div class="swiper-slide">
+                          <a href="<?php the_permalink();?>" class="swiper-slide">
                             <img src="<?php echo $miniImg['url']?>">
                             <h3 class="slide-title"><?php the_title();?></h3>
-                          </div>
+                          </a>
 
                       <?php endwhile; ?>
                   <?php endif; 
@@ -412,7 +412,7 @@ Template Name: Front-page
       </div>
 
       <div class="news-right">
-        <a class="news-right-logo" href="#">
+        <a class="news-right-logo">
           <span><img src="/wp-content/themes/intericco/images/logo-e.svg"></span>
         </a>
       </div>

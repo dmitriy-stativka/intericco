@@ -12,16 +12,14 @@ Template Name: design-single
     <div class="swiper-container swiper-bg">
 
         <div class="swiper-wrapper">
+           <?php while ( have_rows('kartinki_fonovye') ) : the_row(); ?>
+                  <?php $img = get_sub_field('kartinka')['url']; ?>
 
-            <div class="swiper-slide">
-                <img src="/wp-content/themes/intericco/images/front-page-bg.jpg" alt="">
-            </div>
-            <div class="swiper-slide">
-                <img src="/wp-content/themes/intericco/images/front-page-bg.jpg" alt="">
-            </div>
-            <div class="swiper-slide">
-                <img src="/wp-content/themes/intericco/images/front-page-bg.jpg" alt="">
-            </div>
+                  <div class="swiper-slide">
+                    <img src="<?php echo $img;?>" alt="">
+                  </div>
+            <?php endwhile; ?>  
+
         </div>
 
         <div class="swiper-pagination">
@@ -41,8 +39,7 @@ Template Name: design-single
     </div>  
     <div class="top-site-middle">
         <h1 class="top-site-middle-title">
-            Обустройство квартиры 
-            Сергея Шнурова
+            <?php the_title();?>
         </h1>
         <p class="top-site-middle-text">Lorem ipsum lorem ipsum lorem ipsum lorem ipsum
             lorem ipsum lorem ipsum lorem ipsum lorem ipsum
@@ -50,8 +47,8 @@ Template Name: design-single
             lorem ipsum lorem ipsum lorem ipsum 
             lorem ipsum lorem ipsum lorem</p>
         <div class="top-site-middle-bottom">
-        <a href="#" class="main-link top-site-middle-bottom-link">Доверить нам проект</a>
-        <p class="date">20.07.2020</p>
+        <a href="#" class="main-link top-site-middle-bottom-link"><?php pll_e('callus');?></a>
+        <p class="date"><?php echo get_the_date('d.m.Y'); ?></p>
         </div>
     </div>
     <a href="#" class="text-with-logo">
