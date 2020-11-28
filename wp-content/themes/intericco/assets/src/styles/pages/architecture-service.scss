@@ -1,0 +1,472 @@
+.page-id-40{
+
+    .top-site-service-design{
+        background: url(/wp-content/themes/intericco/images/arch-service-top-bg.svg);
+        background-position: bottom;
+        color: black;
+
+        .swiper-container{
+            display: none;
+        }
+
+        .top-crumbs{
+
+            .crumbs-item{
+
+                a{
+                    color: black;
+                }
+
+                &:before{
+                    color: black;
+                }
+            }
+
+            .crumbs-last{
+
+                span{
+                    color: black;
+                }
+
+                &:before{
+                    color: black;
+                }
+            }
+        }
+
+        .top-site-middle{
+
+            &-title{
+                color: black;
+            }
+        }
+
+        .text-with-logo{
+            display: none;
+        }
+
+        &:before{
+            content: none;
+        }
+
+        &:after{
+            content: none;
+        }
+    }
+
+    .middle-wrapper-design-service{
+
+        .middle-line{
+            display: none;
+        }
+
+        .stages{
+            background: url(/wp-content/themes/intericco/images/arch-service-stages-bg.jpg);
+            background-position: bottom;
+
+            .stages-middle{
+
+                .lines-title-wrapper{
+
+                    .line{
+
+                        &-purple{
+                            background: #E1E1E1;
+                        }
+
+                        &-corner{
+                            border-color: #C9C9C9;
+                        }
+
+                        &-blue{
+                            background: #E1E1E1;
+                        }
+                    }
+
+                    &:before{
+                        background-color: black;
+                    }
+                }
+
+                .stages-middle-blocks{
+
+                    &-item{
+
+                        .tripple-btn{
+                            display: none;
+                        }
+
+                        .middle-blocks-item-number{
+                            z-index: 1;
+                        }
+
+                        &:before{
+                            background-color: black;
+                        }
+                    }
+                }
+            }
+
+            .news-right{
+
+                &-logo{
+                    display: none;
+                }
+            }
+        }
+
+        .info{
+
+            &-middle{
+                
+                .lines-title-wrapper{
+
+                    .line{
+
+                        &-purple{
+                            background: #E1E1E1;
+                        }
+
+                        &-corner{
+                            border-color: #C9C9C9;
+                        }
+
+                        &-blue{
+                            background: #E1E1E1;
+                        }
+                    }
+
+                    &:before{
+                        background-color: white;
+                    }
+                }
+            }
+
+            .info-right{
+
+                .text-with-logo{
+                    display: none;
+                }
+            }
+
+            .info-middle-main{
+
+                .tripple-btn{
+
+                    &-first{
+                        background: #575757;
+
+                        &::before{
+                            background: #575757;  
+                        }
+                    }
+
+                    &-second{
+                        background: #9C9C9C;
+                    }
+
+                    &-third{
+                        background: #E9E9E9;
+
+                        &::after{
+                            background: #E9E9E9;  
+                        }
+                    }
+
+                    &:after{
+                        background-color: #ffffff;
+                    }
+                }
+
+                .service-info-price-text{
+
+                    &:after{
+                        background-color: white;
+                    }
+                }
+            }
+
+            &::before{
+                content: "";
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                z-index: -1;
+                background: url(/wp-content/themes/intericco/images/arch-service-stages-bg.jpg);
+                background-position: bottom;
+            }
+        }
+
+        .service-slider{
+            background: url(/wp-content/themes/intericco/images/arch-service-slider-bg.svg);
+            background-position: bottom;
+
+            &-middle{
+
+                .lines-title-wrapper{
+
+                    .line{
+
+                        &-purple{
+                            background: #E1E1E1;
+                        }
+
+                        &-corner{
+                            border-color: #C9C9C9;
+                        }
+
+                        &-blue{
+                            background: #E1E1E1;
+                        }
+                    }
+
+                    &:before{
+                        background-color: black;
+                    }
+                }
+
+                .service-slider-wrapper{
+
+                    .swiper-container{
+
+                        .swiper-slide{
+                            background-color: transparent;
+
+                            .tripple-btn{
+
+                                &-first{
+                                    background: #575757;
+            
+                                    &::before{
+                                        background: #575757;  
+                                    }
+                                }
+            
+                                &-second{
+                                    background: #9C9C9C;
+                                }
+            
+                                &-third{
+                                    background: #E9E9E9;
+            
+                                    &::after{
+                                        background: #E9E9E9;  
+                                    }
+                                }
+            
+                                &:after{
+                                    background-color: #ffffff;
+                                }
+                            }
+
+                            .slide-square{
+
+                                &:after{
+                                    display: none;
+                                }
+                            }
+
+                            ul{
+
+                                li{
+
+                                    &:before{
+                                        background: url(/wp-content/themes/intericco/images/arch-grey-logo.svg);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .service-accordion{
+            background: url(/wp-content/themes/intericco/images/arch-service-accord-bg.svg);
+            background-position: bottom;
+            padding-top: 100px;
+            margin-top: 0;
+
+            .accordion-middle{
+                
+                .lines-title-wrapper{
+
+                    .line{
+
+                        &-purple{
+                            background: #E1E1E1;
+                        }
+
+                        &-corner{
+                            border-color: #C9C9C9;
+                        }
+
+                        &-blue{
+                            background: #E1E1E1;
+                        }
+                    }
+
+                    &:before{
+                        background-color: black;
+                    }
+                }
+
+                .accordion{
+
+                    .line{
+
+                        &-purple{
+                            background: #E1E1E1;
+                        }
+
+                        &-corner{
+                            border-color: #C9C9C9;
+                        }
+
+                        &-blue{
+                            background: #E1E1E1;
+                        }
+                    }
+                }
+
+                .accordion-question{
+
+                    .line{
+
+                        &-purple{
+                            background: #E1E1E1;
+                        }
+
+                        &-corner{
+                            border-color: #C9C9C9;
+                        }
+
+                        &-blue{
+                            background: #E1E1E1;
+                        }
+                    }
+
+                    .tripple-btn{
+
+                        &-first{
+                            background: #575757;
+    
+                            &::before{
+                                background: #575757;  
+                            }
+                        }
+    
+                        &-second{
+                            background: #9C9C9C;
+                        }
+    
+                        &-third{
+                            background: #E9E9E9;
+    
+                            &::after{
+                                background: #E9E9E9;  
+                            }
+                        }
+    
+                        &:after{
+                            background-color: #000;
+                        }
+                    }
+
+                    &-left{
+
+                        h3{
+
+                            &:before{
+                                background-color: #000;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .seo-service{
+            background: url(/wp-content/themes/intericco/images/arch-service-accord-bg.svg);
+            background-position: bottom;
+
+            .design-seo{
+
+                .lines-title-wrapper{
+
+                    .line{
+
+                        &-purple{
+                            background: #E1E1E1;
+                        }
+
+                        &-corner{
+                            border-color: #C9C9C9;
+                        }
+
+                        &-blue{
+                            background: #E1E1E1;
+                        }
+                    }
+
+                    &:before{
+                        background-color: black;
+                    }
+
+                    &:after{
+                        background-color: #7D7D7D;
+                    }
+                }
+
+                &-middle{
+
+                    h4{
+
+                        &:before{
+                            background-color: #282828;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer{
+
+        .map-container{
+            
+            .line{
+
+                &-purple{
+                    background: #E1E1E1;
+                }
+
+                &-corner{
+                    border-color: #C9C9C9;
+                }
+
+                &-blue{
+                    background: #E1E1E1;
+                }
+            }
+        }
+
+        .footer-bottom{
+
+            .footer-title{
+
+                &::before{
+                    border-color: white;
+
+                }
+
+                &::after{
+                    border-color: white;
+
+                }
+            }
+        }
+    }
+}
