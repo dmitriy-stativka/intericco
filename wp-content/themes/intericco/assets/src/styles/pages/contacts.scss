@@ -9,7 +9,7 @@
         justify-content: center;
         min-height: 100vh;
         position: relative;
-        padding: 0 150px;
+        padding: 0 15px;
 
         .menu-left{
             height: 100%;
@@ -20,6 +20,15 @@
 
             .info-right{
                 display: block;
+                position: relative;
+
+                .text-with-logo{
+                    top: -800px;
+
+                    span{
+                        color: black;
+                    }
+                }
             }
         }
     
@@ -31,9 +40,13 @@
             position: relative;
 
             .top-crumbs{
-                margin-bottom: 140px;
+                display: flex;
+                justify-content: center;
+                margin-bottom: 60px;
+                padding-top: 75px;
 
                 .crumbs-last{
+                    display: flex;
 
                     .line{
 
@@ -59,6 +72,28 @@
                             bottom: 0px;
                         }
                     }
+
+                    &:before{
+                        display: none;
+
+                        @media(min-width: $desktop) {
+                            display: block;
+                        }
+                    }
+                }
+
+                &:before{
+                    display: none;
+
+                    @media(min-width: $desktop) {
+                        display: block;
+                    }
+                }
+
+                @media(min-width: $desktop) {
+                    justify-content: initial;
+                    margin-bottom: 140px;
+                    padding-top: 0;
                 }
             }
 
@@ -73,26 +108,44 @@
                     font-weight: bold;
                     font-size: 35px;
                     color: black;
-                    margin-bottom: 100px;
+                    margin-bottom: 50px;
+                    text-align: center;
+
+                    @media(min-width: $desktop) {
+                        margin-bottom: 100px;
+                        text-align: initial;
+                    }
                 }
 
                 &-left{
-                    max-width: 55%;
+                    max-width: 100%;
                     width: 100%;
 
                     .footer-bottom-right{
+                        margin-bottom: 50px;
 
                         .footer-right-info-item{     
-                            margin-bottom: 70px;                    
 
                             .footer-right-info-item-place{
                                 color: #373737;
                             }
+
+                            @media(min-width: $desktop) {
+                                margin-bottom: 70px;
+                            }
+                        }
+
+                        @media(min-width: $desktop) {
+                            margin-bottom: 0;
                         }
                     }
 
                     .contacts-map-block{
                         position: relative;
+
+                        iframe{
+                            width: 100%!important;
+                        }
 
                         img{
                             position: absolute;
@@ -101,13 +154,37 @@
                             z-index: -1;
                         }
                     }
+
+                    @media(min-width: $desktop) {
+                        max-width: 55%;
+                    }
                 }
 
                 &-form{
+                    display: none;
                     max-width: 35%;
                     width: 100%;
+
+                    @media(min-width: $desktop) {
+                        display: block;
+                    }
                 }
             }
+        }
+
+        .menu-left{
+
+            .text-with-logo{
+                display: none;
+
+                @media(min-width: $desktop) {
+                    display: block;
+                }
+            }
+        }
+
+        @media(min-width: $desktop) {
+            padding: 0 150px;
         }
     }
 
@@ -169,6 +246,7 @@
 }
 
 .contacts-text{
+    display: none;
     margin-bottom: 150px;
 
     img{
@@ -181,5 +259,9 @@
         line-height: 24px;
         color: #232222;
         font-family: 'Gotham Pro';
+    }
+
+    @media(min-width: $desktop) {
+        display: block;
     }
 }

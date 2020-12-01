@@ -41,11 +41,7 @@ Template Name: design-single
         <h1 class="top-site-middle-title">
             <?php the_title();?>
         </h1>
-        <p class="top-site-middle-text">Lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-            lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-            lorem ipsum lorem ipsum lorem ipsum lorem
-            lorem ipsum lorem ipsum lorem ipsum 
-            lorem ipsum lorem ipsum lorem</p>
+        <p class="top-site-middle-text"><?php the_field('opisanie')?></p>
         <div class="top-site-middle-bottom">
         <a href="#" class="main-link top-site-middle-bottom-link"><?php pll_e('callus');?></a>
         <p class="date"><?php echo get_the_date('d.m.Y'); ?></p>
@@ -85,10 +81,17 @@ Template Name: design-single
             <div class="author-block">
                 <h2 class="author-block-title">автор</h2>
                 <div class="author-img-block">
-                    <img class="author-avatar" src="" alt="">
+
+
+
+                
+
+
+
+                    <img class="author-avatar" src="<?php $foto_avtora = get_field('foto_avtora')['url'];  echo $foto_avtora;?>" alt="">
                     <div class="design-icon"><img src="/wp-content/themes/intericco/images/small-design-icon.svg" alt=""></div>
                 </div>
-                <span class="author-name">Сергей Грищук</span>               
+                <span class="author-name"><?php the_field('name_author');?></span>               
             </div>
         
             <div class="blog-single-main-top-moment">
@@ -101,19 +104,7 @@ Template Name: design-single
                     </div>
                 </div>
                 <div class="moment-text">
-                    <p> Концепция: дизайн квартиры в светлых тонах
-                        для молодой семьи.Решение: в основе планировочного
-                        решения этой квартиры лежит объединение кухни и
-                        гостиной с выделением небольшой обеденной зоны.</p>
-
-                        <p>
-                            Изолированными комнатами оставили спальню хозяев
-                            и детскую комнату. Концепция: дизайн квартиры в тон
-                            тонах для молодой семьи. Решение: в основе планиро
-                            решения этой квартиры лежит объединение кухни и
-                            гостиной с выделением небольшой обеденной зоны.
-                            Изолированными комнатами оставили спальню хозяев
-                            и детскую комнату.</p>
+                  <?php the_field('tekst_avtora');?>
 
                     <div class="moment-text-bg">
                         <span>ABOUT</span>
@@ -168,7 +159,7 @@ Template Name: design-single
                   <span class="line line-blue"></span>  
                 </div>    
                 <div class="lines-title-wrapper">
-                    <h2 class="lines-title info-middle-top-title">2D Дизайн</h2>
+                    <h2 class="lines-title info-middle-top-title"><?php the_field('2d_dizajn');?></h2>
                     <span class="line line-purple line-purple-mob"></span>
                     <span class="line line-corner line-corner-mob"></span>
                     <span class="line line-blue line-blue-mob"></span>             
@@ -180,25 +171,15 @@ Template Name: design-single
           <div class="info-blog-single-middle">
 
             <div class="info-blog-single-middle-text">
-
-                <p>Концепция: дизайн квартиры в светлых тонах
-                    для молодой семьи.Решение: в основе планировочного
-                    решения этой квартиры лежит объединение кухни и
-                    гостиной с выделением небольшой обеденной зоны.</p>
-                <p>    
-                    Изолированными комнатами оставили спальню хозяев
-                    и детскую комнату. Концепция: дизайн квартиры в тон
-                    тонах для молодой семьи. Решение: в основе планиро
-                    решения этой квартиры лежит объединение кухни и
-                    гостиной с выделением небольшой обеденной зоны.</p>
+                <?php the_field('tekstovaya_oblast');?>
             </div>
 
             <div class="info-blog-single-middle-img">
                 <span class="line line-purple"></span>
                 <span class="line line-corner"></span>
                 <span class="line line-blue"></span>  
-                <img src="/wp-content/themes/intericco/images/blog-map.jpg" alt="">
-                <span class="blog-single-img-text">Дизайн-проект квартиры</span>
+                <img src="<?php $izobrazhenie_dizajna_2d = get_field('izobrazhenie_dizajna_2d')['url'];  echo $izobrazhenie_dizajna_2d;?>" alt="">
+                <span class="blog-single-img-text"><?php the_field('tekst-miniatyura');?></span>
             </div>
           </div>
     
@@ -246,7 +227,7 @@ Template Name: design-single
                           <span class="line line-blue"></span>  
                         </div>    
                         <div class="lines-title-wrapper">
-                            <h2 class="lines-title info-middle-top-title">3D Дизайн</h2>
+                            <h2 class="lines-title info-middle-top-title"><?php the_field('3d_dizajn');?></h2>
                             <span class="line line-purple line-purple-mob"></span>
                             <span class="line line-corner line-corner-mob"></span>
                             <span class="line line-blue line-blue-mob"></span>    
@@ -264,32 +245,20 @@ Template Name: design-single
                         <span class="line line-purple"></span>
                         <span class="line line-corner"></span>
                         <span class="line line-blue"></span>  
-                        <img src="/wp-content/themes/intericco/images/map-2.jpg" alt="">
+                        <img src="<?php $izobrazhenie_dizajna = get_field('izobrazhenie_dizajna')['url'];  echo $izobrazhenie_dizajna;?> " alt="">
                         <span class="blog-single-img-text">Этап 2</span>
                     </div>
 
                     <div class="middle-3d-center-text">
-                        <p> Концепция: дизайн квартиры в светлых тонах
-                            для молодой семьи.Решение: в основе планировочного
-                            решения этой квартиры лежит объединение кухни и
-                            гостиной с выделением небольшой обеденной зоны.
-                        </p>
-                        <p class="show-more-text">
-                            Изолированными комнатами оставили спальню хозяев
-                            и детскую комнату. оставили спальню хозяев
-                            Изолированными комнатами оставили спальню хозяев
-                            и детскую комнату. оставили спальню хозяев
-                            Изолированными комнатами оставили спальню хозяев
-                            и детскую комнату. оставили спальню хозяев
-                        </p>
+                        <?php the_field('tekst_dizajna');?>
                         <a class="show-more">Посмотреть больше</a>
                     </div>
                   </div>
 
                   <a href="#" class="consultation">
                     <div class="consultation-text">
-                        <h3>Понравился проект?</h3>
-                        <p>Мы всегда рады взять ещё один! Заполни форму - мы свяжемся с тобой</p>
+                        <h3><?php the_field('zagolovok_ponravilsya');?></h3>
+                        <p><?php the_field('podzagolovok');?></p>
                     </div>
                     <div class="tripple-btn tripple-btn-bigger">
                         <span class="tripple-btn-first"></span>
@@ -321,7 +290,7 @@ Template Name: design-single
                           <span class="line line-blue"></span>  
                         </div>    
                         <div class="lines-title-wrapper">
-                            <h2 class="lines-title info-middle-top-title">Особый материал</h2>
+                            <h2 class="lines-title info-middle-top-title"><?php the_field('zagolovok_osobyj_material');?></h2>
                             <span class="line line-purple line-purple-mob"></span>
                             <span class="line line-corner line-corner-mob"></span>
                             <span class="line line-blue line-blue-mob"></span>                                
@@ -331,16 +300,13 @@ Template Name: design-single
 
                 <div class="fabric-middle-content">
                     <div class="fabric-middle-content-img">
-                        <img src="/wp-content/themes/intericco/images/chair.jpg" alt="">
+                        <img src="<?php $izobrazhenie_materiala = get_field('izobrazhenie_materiala')['url'];  echo $izobrazhenie_materiala;?>" alt="">
                     </div>
 
                     <div class="fabric-middle-content-text">
-                        <h2>Кресло «Тривиал»</h2>
+                        <h2><?php the_field('zagolovokmateriala');?></h2>
                         <div>
-                            <p>Концепция: дизайн квартиры в светлых тонах
-                                для молодой семьи. Решение: в основе планировочного
-                                решения этой квартиры лежит объединение кухни и
-                                гостиной </p>
+                        <?php the_field('opisanie_materiala');?>
                         </div>     
                         <span class="number">01</span>              
                     </div>

@@ -203,9 +203,10 @@
             background: url(/wp-content/themes/intericco/images/arch-service-slider-bg.svg);
             background-position: bottom;
 
-            &-middle{
+            &-middle{               
 
                 .lines-title-wrapper{
+
 
                     .line{
 
@@ -229,7 +230,7 @@
 
                 .service-slider-wrapper{
 
-                    .swiper-container{
+                    .swiper-container{                  
 
                         .swiper-slide{
                             background-color: transparent;
@@ -277,7 +278,7 @@
                                     }
                                 }
                             }
-                        }
+                        }                  
                     }
                 }
             }

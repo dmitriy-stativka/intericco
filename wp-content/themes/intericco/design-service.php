@@ -270,21 +270,6 @@ Template Name: service-design
                     ?>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-                        
-                        
-                  
                     </div>
 
                     <div class="swiper-pagination">
@@ -309,7 +294,7 @@ Template Name: service-design
         <div class="accordion-middle">
             
             <div class="lines-title-wrapper">
-                <h1 class="lines-title info-middle-top-title">Уникальный метод</h1>
+                <h1 class="lines-title info-middle-top-title">Частые вопросы</h1>
                 <span class="line line-purple line-purple-mob"></span>
                 <span class="line line-corner line-corner-mob"></span>
                 <span class="line line-blue line-blue-mob"></span>        
@@ -319,57 +304,33 @@ Template Name: service-design
 
                 <div class="design-icon"><img src="/wp-content/themes/intericco/images/small-design-icon.svg" alt=""></div>        
 
-                <div class="content-box">
-                    <div class="label">
-                        <span class="number">01</span>
-                        <span class="label-name">Планировка уже определена</span>
-                        <div class="open-plus">
-                            <svg class="icon"><use xlink:href="#plus"></svg>
+
+
+
+
+                <?php
+                    $nummbbbb;
+                    while ( have_rows('chastye_voprosy') ) : the_row(); $nummbbbb++?>
+                        <?php $zagolovok = get_sub_field('zagolovok');
+                                $opisanie = get_sub_field('opisanie'); ?>
+                        
+                        <div class="content-box">
+                            <div class="label">
+                                <span class="number">0<?php echo $nummbbbb;?></span>
+                                <span class="label-name"><?php echo $zagolovok;?></span>
+                                <div class="open-plus">
+                                    <svg class="icon"><use xlink:href="#plus"></svg>
+                                </div>
+                            </div>
+                            
+                            <div class="content">
+                                <p><?php echo $opisanie;?></p>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="content">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eum illo laudantium beatae delectus omnis natus, quia accusamus architecto temporibus debitis, tempore, exercitationem eligendi hic dolores tenetur maiores explicabo repudiandae.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="content-box">
-                    <div class="label">
-                        <span class="number">02</span>
-                        <span class="label-name">Планировка уже определена</span>
-                        <div class="open-plus">
-                            <svg class="icon"><use xlink:href="#plus"></svg>
-                        </div>
-                    </div>
-                    
-                    <div class="content">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eum illo laudantium beatae delectus omnis natus, quia accusamus architecto temporibus debitis, tempore, exercitationem eligendi hic dolores tenetur maiores explicabo repudiandae.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="content-box">
-                    <span class="line line-purple"></span>
-                    <span class="line line-corner"></span>
-                    <span class="line line-blue"></span>  
-                    <div class="label">
-                        <span class="number">03</span>
-                        <span class="label-name">Планировка уже определена</span>
-                        <div class="open-plus">
-                            <svg class="icon"><use xlink:href="#plus"></svg>
-                        </div>
-                    </div>
-                    
-                    <div class="content">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis eum illo laudantium beatae delectus omnis natus, quia accusamus architecto temporibus debitis, tempore, exercitationem eligendi hic dolores tenetur maiores explicabo repudiandae.
-                        </p>
-                    </div>
-                </div>
-                
+
+                    <?php endwhile; 
+                ?>
+
             </div>
 
             <div class="accordion-question">
@@ -400,20 +361,14 @@ Template Name: service-design
             <div class="design-icon"><img src="/wp-content/themes/intericco/images/small-design-icon.svg" alt=""></div>
     
             <div class="lines-title-wrapper">
-              <h1 class="lines-title info-middle-top-title">Какой-то SEO текст</h1>
+              <h1 class="lines-title info-middle-top-title"><?php the_title();?></h1>
               <span class="line line-purple line-purple-mob"></span>
               <span class="line line-corner line-corner-mob"></span>
               <span class="line line-blue line-blue-mob"></span>             
             </div>  
     
             <div class="design-seo-middle">
-              <h4>Какой-то SEO заголовок</h4>
-              <p>Жизнь любого нашего проекта, будь то дизайн интерьера или архитектура, начинается задолго до первой линии эскиза
-                задолго до первой линии эскиза задолго до первой линии эскиза. Начало заложено в жизненном опыте заказчика и в
-                его понимании своих желаний. В его естественных, сложившехся за годы привычках и мироощущении. Начало
-                вшито в наши компетенции и врожденную скрупулезность в деталях. Начало заложено в жизненном опыте заказчика и
-                в его понимании своих желаний. В его естественных, сложившехся за годы привычках и мироощущении. Начало
-                вшито в наши компетенции и врожденную скрупулезность в деталях</p>
+                <?php the_content();?>
             </div>
     
           </div>

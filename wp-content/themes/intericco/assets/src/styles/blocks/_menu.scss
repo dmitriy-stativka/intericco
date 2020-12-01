@@ -175,14 +175,14 @@
 
                     .link-content{
                         position: absolute;
-                        top: 30%;     
+                        top: 40%;     
                         right: 0;
                         left: 0;
                         text-align: center;                                           
 
                         .link-content-main{
                             font-family: "Gotham Pro", sans-serif;                         
-                            font-size: 23px;
+                            font-size: 15px;
                             font-weight: bold;
                             transition: color 0.3s ease;
                             max-width: 180px; 
@@ -190,6 +190,10 @@
                             margin: 0 auto;
                             text-align: center;
                             line-height: 159.5%;
+
+                            @media(min-width: $desktop) {
+                                font-size: 23px;
+                            }
                         }
 
                         .link-content-sub{
@@ -217,6 +221,10 @@
                                     border-bottom: none;
                                 }
                             }
+                        }
+
+                        @media(min-width: $desktop) {
+                            top: 30%;
                         }
                     }
 

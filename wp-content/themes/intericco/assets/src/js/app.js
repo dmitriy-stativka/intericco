@@ -2,6 +2,10 @@
 
 $(document).ready(function () {
 
+  if(window.innerWidth < 1023) {
+    $("body").addClass("body-mob")
+  }
+
   new WOW().init();
 
   $.fn.animate_Text = function(t) {
@@ -83,12 +87,12 @@ $(document).ready(function () {
     
     //menu
     $(".menu-left-top").click(function() {
-      // $("body").addClass("menu-opened");
+      $(".body-mob").addClass("menu-opened");
       $(".navigation").addClass("navigation-open");
     })
 
     $(".menu-left-top-burger-close").click(function() {
-      // $("body").removeClass("menu-opened");
+      $(".body-mob").removeClass("menu-opened");
       $(".navigation").removeClass("navigation-open");
     })
 
