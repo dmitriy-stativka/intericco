@@ -9,13 +9,9 @@ Template Name: Front-page
 
 <section style="background: url(/wp-content/themes/intericco/images/front-page-bg.jpg) no-repeat top center; background-size: cover;" class="top-site">   
   <div class="top-site-middle">
-
     <div class="top-site-text">
       <h1 class="top-site-middle-title"><span><?php the_field('general_title');?></span></h1>
     </div>
-
-    
-
     <div class="top-site-middle-bottom wow animate__fadeInUp" data-wow-duration="2s">
       <a href="#" class="main-link top-site-middle-bottom-link"><?php the_field('general_btn');?></a>
       <p><?php the_field('prizyv');?></p>
